@@ -1,0 +1,6 @@
+[user]
+	email = juan.jramirez@mercadolibre.com.co
+	name = juaramirez
+	username = juaramirez
+[core]
+	hooksPath = /Users/juaramirez/.config/git/hooks/
