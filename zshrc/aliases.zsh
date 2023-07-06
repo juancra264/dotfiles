@@ -11,6 +11,7 @@ alias eveng="ssh root@192.168.186.21"
 alias coboe1="ssh jcramirez@10.203.32.62"
 alias rancid="ssh batman.adminml.com admin_juaramirez@10.198.26.213"
 alias awsvi="ssh batman.adminml.com juaramirez@10.198.36.9"
+alias backup="ssh batman.adminml.com ubuntu@10.61.51.21"
 alias batman="ssh batman.adminml.com"
 # GCP shortcuts:
 alias gclist="gcloud compute instances list"
