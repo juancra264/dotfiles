@@ -1,0 +1,104 @@
+/Applications/Safari.app
+/Applications/WhatsApp.app
+/Applications/Google Chrome.app
+/Applications/Royal TSX.app
+/Applications/qView.app
+/Applications/Firefox.app
+/Applications/Adobe Acrobat Reader.app
+/Applications/Sublime Text.app
+/Applications/iTerm.app
+/Applications/Visual Studio Code.app
+/Applications/Bitwarden.app
+/Applications/Clipy.app
+/Applications/OpenVPN Connect/OpenVPN Connect.app
+/Applications/OpenVPN Connect/Uninstall OpenVPN Connect.app
+/Users/juaramirez/Applications/Chrome Apps.localized/Create React App Sample.app
+/Applications/Workspace ONE Intelligent Hub.app
+/Applications/Slack.app
+/Applications/draw.io.app
+/Applications/VLC.app
+/Applications/LibreOffice.app
+/Applications/Webex.app
+/Applications/inSSIDer.app
+/Applications/TamoGraph.app
+/Applications/balenaEtcher.app
+/Applications/DaVinci Resolve/Uninstall Resolve.app
+/Applications/DaVinci Resolve/DaVinci Control Panels Setup.app
+/Applications/DaVinci Resolve/Fairlight Studio Utility.app
+/Applications/Blackmagic RAW/Blackmagic RAW Player.app
+/Applications/Blackmagic RAW/Blackmagic RAW Speed Test.app
+/Applications/Eve Client.app
+/Applications/Eve Wireshark.app
+/Applications/VNC Viewer.app
+/Applications/HP Easy Scan.app
+/Applications/GIMP-2.10.app
+/Applications/Dozer.app
+/Applications/AnyDesk.app
+/Applications/Blackmagic Proxy Generator Lite.app
+/Applications/GNS3.app
+/Applications/Android File Transfer.app
+/Applications/Lightshot Screenshot.app
+/Applications/Arduino.app
+/Applications/calibre.app
+/Applications/FortiClient.app
+/Applications/Brackets.app
+/Applications/IntelliJ IDEA CE.app
+/Applications/GlobalProtect.app
+/Applications/Mic Drop.app
+/Applications/Audacity.app
+/Applications/FortiClientUninstaller.app
+/Applications/YouTube Music.app
+/Applications/GarageBand.app
+/Applications/Brave Browser.app
+/Applications/Foxit PDF Reader.app
+/Applications/Discord.app
+/Applications/Disk Inspector.app
+/Applications/Enpass.app
+/Applications/Assist.app
+/Applications/Google Drive.app
+/Applications/Google Drive.app/Contents/Applications/FinderHelper.app
+/Applications/Google Docs.app
+/Applications/Google Sheets.app
+/Applications/Google Slides.app
+/Applications/Cloud Monitoring for Catalyst.app
+/Applications/Mac Mouse Fix.app
+/Applications/Rectangle.app
+/Applications/Keka.app
+/Applications/NetSpot.app
+/Applications/OBS.app
+/Applications/GoToMeeting.app
+/Applications/iStat Menus.app
+/Applications/Falcon.app
+/Applications/Wireshark.app
+/Users/juaramirez/Applications/Chrome Apps.localized/Google Meet.app
+/Users/juaramirez/Applications/Chrome Apps.localized/Google Tasks Desktop.app
+/Users/juaramirez/Applications/Chrome Apps.localized/Google Chat.app
+/Applications/Discovery.app
+/Applications/OmiMirrorForChromecast.app
+/Applications/VMware Fusion.app
+/Applications/Workplace Chat.app
+/Applications/Microsoft Edge.app
+/Applications/Microsoft Teams.app
+/Users/juaramirez/Applications/Chrome Apps.localized/diagrams.net.app
+/Applications/eDrawings.app
+/Applications/kitty.app
+/Applications/Obsidian.app
+/Applications/Raspberry Pi Imager.app
+/Applications/Warp.app
+/Applications/Virtual Intranet Access.app
+/Applications/iMovie.app
+/Applications/zoom.us.app
+/Applications/Postman.app
+/Applications/FileZilla.app
+/Applications/Keynote.app
+/Applications/Pages.app
+/Applications/Numbers.app
+/Applications/mhunt.app
+/Applications/VirtualBox.app
+/Applications/DaVinci Resolve/DaVinci Resolve.app
+/Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Applications/Electron.app
+/Applications/AltTab.app
+/Applications/Alfred 5.app
+/Applications/Microsoft Remote Desktop.app
+/Applications/Evernote.app
+/Applications/Notion.app
