@@ -9,14 +9,14 @@
 /System/Library/Services/ChineseTextConverterService.app
 /System/Library/Services/SummaryService.app
 /System/Library/PrivateFrameworks/UserActivity.framework/Agents/UASharedPasteboardProgressUI.app
-/Applications/WhatsApp.app
-/Applications/Royal TSX.app
 /Applications/qView.app
+/Applications/Firefox.app
+/Applications/Royal TSX.app
 /Users/juaramirez/Library/Application Support/com.lemonmojo.RoyalTSX.App
 /Users/juaramirez/Library/HTTPStorages/com.lemonmojo.RoyalTSX.App
-/Applications/Firefox.app
 /Applications/Sublime Text.app
 /Applications/iTerm.app
+/Applications/WhatsApp.app
 /Applications/Visual Studio Code.app
 /Applications/Bitwarden.app
 /System/Applications/Mail.app
@@ -272,9 +272,9 @@
 /Applications/Clipy.app
 /Applications/OpenVPN Connect/OpenVPN Connect.app
 /Applications/OpenVPN Connect/Uninstall OpenVPN Connect.app
-/Users/juaramirez/Applications/Chrome Apps.localized/Create React App Sample.app
-/Applications/Workspace ONE Intelligent Hub.app
-/Applications/Slack.app
+/Applications/Brackets.app
+/Applications/IntelliJ IDEA CE.app
+/Applications/Alfred 5.app
 /Users/juaramirez/Virtual Machines.localized/Windows 10 x64.vmwarevm/Applications/pchealthcheck — Windows 10 x64.app
 /Applications/draw.io.app
 /Applications/VLC.app
@@ -340,8 +340,6 @@
 /Library/Image Capture/Devices/Canon IJScanner6.app
 /Library/Image Capture/Devices/Canon IJScanner2.app
 /Users/juaramirez/Library/Application Scripts/group.is.workflow.my.app
-/Applications/Brackets.app
-/Applications/IntelliJ IDEA CE.app
 /Users/juaramirez/Library/Application Support/GoToOpener/GoToOpener.app
 /Library/Printers/hp/Frameworks/HPDeviceModel.framework/Versions/4.0/Runtime/hpdot4d.app
 /Library/Printers/hp/filter/hpPreProcessing.filter
@@ -467,6 +465,7 @@
 /Library/Application Support/Script Editor/Templates/Cocoa-AppleScript Applet.app
 /Library/Printers/hp/Frameworks/HPDM.framework/Versions/5.0/Runtime/hpdot4d.app
 /Users/juaramirez/Applications/Chrome Apps.localized/diagrams.net.app
+/Users/juaramirez/Applications/Chrome Apps.localized/Create React App Sample.app
 /Library/Image Capture/Support/LegacyDeviceDiscoveryHelpers/AirScanLegacyDiscovery.app
 /Applications/eDrawings.app
 /Applications/kitty.app
@@ -490,11 +489,13 @@
 /Library/Application Support/AirWatch/Frameworks/Sparkle.framework/Versions/B/Updater.app
 /Library/Application Support/AirWatch/Data/Munki/bin/Python.framework/Versions/3.11/Resources/Python.app
 /Library/Application Support/AirWatch/HubAutoUpdater.app
+/Applications/Workspace ONE Intelligent Hub.app
 /Applications/Postman.app
 /Applications/FileZilla.app
 /Applications/Keynote.app
 /Applications/Pages.app
 /Applications/Numbers.app
+/Applications/Slack.app
 /Applications/mhunt.app
 /usr/local/Cellar/python@3.11/3.11.6/Python Launcher 3.app
 /Applications/VirtualBox.app
@@ -502,7 +503,6 @@
 /Applications/DaVinci Resolve/DaVinci Resolve.app
 /Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Applications/Electron.app
 /Applications/AltTab.app
-/Applications/Alfred 5.app
 /Applications/Microsoft Remote Desktop.app
 /Library/Apple/System/Library/CoreServices/XProtect.app
 /Applications/Evernote.app

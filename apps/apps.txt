@@ -1,20 +1,20 @@
 /Applications/Safari.app
-/Applications/WhatsApp.app
-/Applications/Google Chrome.app
-/Applications/Royal TSX.app
 /Applications/qView.app
 /Applications/Firefox.app
+/Applications/Google Chrome.app
+/Applications/Royal TSX.app
 /Applications/Adobe Acrobat Reader.app
 /Applications/Sublime Text.app
 /Applications/iTerm.app
+/Applications/WhatsApp.app
 /Applications/Visual Studio Code.app
 /Applications/Bitwarden.app
 /Applications/Clipy.app
 /Applications/OpenVPN Connect/OpenVPN Connect.app
 /Applications/OpenVPN Connect/Uninstall OpenVPN Connect.app
-/Users/juaramirez/Applications/Chrome Apps.localized/Create React App Sample.app
-/Applications/Workspace ONE Intelligent Hub.app
-/Applications/Slack.app
+/Applications/Brackets.app
+/Applications/IntelliJ IDEA CE.app
+/Applications/Alfred 5.app
 /Applications/draw.io.app
 /Applications/VLC.app
 /Applications/LibreOffice.app
@@ -41,8 +41,6 @@
 /Applications/Arduino.app
 /Applications/calibre.app
 /Applications/FortiClient.app
-/Applications/Brackets.app
-/Applications/IntelliJ IDEA CE.app
 /Applications/GlobalProtect.app
 /Applications/Mic Drop.app
 /Applications/Audacity.app
@@ -80,6 +78,7 @@
 /Applications/Microsoft Edge.app
 /Applications/Microsoft Teams.app
 /Users/juaramirez/Applications/Chrome Apps.localized/diagrams.net.app
+/Users/juaramirez/Applications/Chrome Apps.localized/Create React App Sample.app
 /Applications/eDrawings.app
 /Applications/kitty.app
 /Applications/Obsidian.app
@@ -88,17 +87,18 @@
 /Applications/Virtual Intranet Access.app
 /Applications/iMovie.app
 /Applications/zoom.us.app
+/Applications/Workspace ONE Intelligent Hub.app
 /Applications/Postman.app
 /Applications/FileZilla.app
 /Applications/Keynote.app
 /Applications/Pages.app
 /Applications/Numbers.app
+/Applications/Slack.app
 /Applications/mhunt.app
 /Applications/VirtualBox.app
 /Applications/DaVinci Resolve/DaVinci Resolve.app
 /Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Applications/Electron.app
 /Applications/AltTab.app
-/Applications/Alfred 5.app
 /Applications/Microsoft Remote Desktop.app
 /Applications/Evernote.app
 /Applications/Notion.app

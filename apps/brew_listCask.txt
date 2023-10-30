@@ -1,0 +1,6 @@
+alt-tab
+dozer
+fig
+google-cloud-sdk
+kitty
+virtualbox

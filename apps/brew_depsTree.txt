@@ -1,0 +1,665 @@
+alt-tab
+
+ansible
+├── cffi
+│   ├── pycparser
+│   └── python-setuptools
+├── pycparser
+├── python-certifi
+│   └── ca-certificates
+├── python-cryptography
+│   ├── cffi
+│   │   ├── pycparser
+│   │   └── python-setuptools
+│   └── openssl@3
+│       └── ca-certificates
+├── python-lxml
+├── python-markupsafe
+├── python-packaging
+├── python-pytz
+├── python@3.11
+│   ├── mpdecimal
+│   ├── openssl@3
+│   │   └── ca-certificates
+│   ├── sqlite
+│   │   └── readline
+│   └── xz
+├── pyyaml
+│   └── libyaml
+└── six
+
+autoconf
+└── m4
+
+bat
+├── libgit2
+│   ├── libssh2
+│   │   └── openssl@3
+│   │       └── ca-certificates
+│   └── openssl@3
+│       └── ca-certificates
+└── oniguruma
+
+brotli
+
+c-ares
+
+ca-certificates
+
+capstone
+
+cffi
+├── pycparser
+└── python-setuptools
+
+colima
+└── lima
+    └── qemu
+        ├── capstone
+        ├── dtc
+        ├── glib
+        │   ├── pcre2
+        │   └── gettext
+        ├── gnutls
+        │   ├── ca-certificates
+        │   ├── gmp
+        │   ├── libidn2
+        │   │   ├── libunistring
+        │   │   └── gettext
+        │   ├── libtasn1
+        │   ├── libunistring
+        │   ├── nettle
+        │   │   └── gmp
+        │   ├── p11-kit
+        │   │   ├── ca-certificates
+        │   │   └── libtasn1
+        │   └── unbound
+        │       ├── libevent
+        │       │   └── openssl@3
+        │       │       └── ca-certificates
+        │       ├── libnghttp2
+        │       └── openssl@3
+        │           └── ca-certificates
+        ├── jpeg-turbo
+        ├── libpng
+        ├── libslirp
+        │   └── glib
+        │       ├── pcre2
+        │       └── gettext
+        ├── libssh
+        │   └── openssl@3
+        │       └── ca-certificates
+        ├── libusb
+        ├── lzo
+        ├── ncurses
+        ├── nettle
+        │   └── gmp
+        ├── pixman
+        ├── snappy
+        ├── vde
+        └── zstd
+            ├── lz4
+            └── xz
+
+ctop
+
+docker
+└── docker-completion
+
+docker-completion
+
+docker-compose
+
+docker-credential-helper
+
+dozer
+
+dtc
+
+exa
+└── libgit2
+    ├── libssh2
+    │   └── openssl@3
+    │       └── ca-certificates
+    └── openssl@3
+        └── ca-certificates
+
+fig
+
+fping
+
+gdbm
+
+gettext
+
+glances
+├── python-packaging
+└── python@3.12
+    ├── mpdecimal
+    ├── openssl@3
+    │   └── ca-certificates
+    ├── sqlite
+    │   └── readline
+    └── xz
+
+glib
+├── pcre2
+└── gettext
+
+gmp
+
+gnu-sed
+
+gnutls
+├── ca-certificates
+├── gmp
+├── libidn2
+│   ├── libunistring
+│   └── gettext
+├── libtasn1
+├── libunistring
+├── nettle
+│   └── gmp
+├── p11-kit
+│   ├── ca-certificates
+│   └── libtasn1
+└── unbound
+    ├── libevent
+    │   └── openssl@3
+    │       └── ca-certificates
+    ├── libnghttp2
+    └── openssl@3
+        └── ca-certificates
+
+go
+
+google-cloud-sdk
+└── python@3.10
+    ├── gdbm
+    ├── mpdecimal
+    ├── openssl@3
+    │   └── ca-certificates
+    ├── readline
+    ├── sqlite
+    │   └── readline
+    └── xz
+
+gping
+└── libgit2@1.6
+    ├── libssh2
+    │   └── openssl@3
+    │       └── ca-certificates
+    └── openssl@3
+        └── ca-certificates
+
+htop
+└── ncurses
+
+icu4c
+
+ipcalc
+
+iperf3
+└── openssl@3
+    └── ca-certificates
+
+jansson
+
+jpeg-turbo
+
+jsonschema
+└── python@3.11
+    ├── mpdecimal
+    ├── openssl@3
+    │   └── ca-certificates
+    ├── sqlite
+    │   └── readline
+    └── xz
+
+keyring
+├── cffi
+│   ├── pycparser
+│   └── python-setuptools
+├── pycparser
+└── python@3.12
+    ├── mpdecimal
+    ├── openssl@3
+    │   └── ca-certificates
+    ├── sqlite
+    │   └── readline
+    └── xz
+
+kitty
+
+libevent
+└── openssl@3
+    └── ca-certificates
+
+libgit2
+├── libssh2
+│   └── openssl@3
+│       └── ca-certificates
+└── openssl@3
+    └── ca-certificates
+
+libgit2@1.6
+├── libssh2
+│   └── openssl@3
+│       └── ca-certificates
+└── openssl@3
+    └── ca-certificates
+
+libidn2
+├── libunistring
+└── gettext
+
+liblinear
+
+libnghttp2
+
+libpng
+
+libslirp
+└── glib
+    ├── pcre2
+    └── gettext
+
+libssh
+└── openssl@3
+    └── ca-certificates
+
+libssh2
+└── openssl@3
+    └── ca-certificates
+
+libtasn1
+
+libtermkey
+└── unibilium
+
+libunistring
+
+libusb
+
+libuv
+
+libvterm
+
+libyaml
+
+lima
+└── qemu
+    ├── capstone
+    ├── dtc
+    ├── glib
+    │   ├── pcre2
+    │   └── gettext
+    ├── gnutls
+    │   ├── ca-certificates
+    │   ├── gmp
+    │   ├── libidn2
+    │   │   ├── libunistring
+    │   │   └── gettext
+    │   ├── libtasn1
+    │   ├── libunistring
+    │   ├── nettle
+    │   │   └── gmp
+    │   ├── p11-kit
+    │   │   ├── ca-certificates
+    │   │   └── libtasn1
+    │   └── unbound
+    │       ├── libevent
+    │       │   └── openssl@3
+    │       │       └── ca-certificates
+    │       ├── libnghttp2
+    │       └── openssl@3
+    │           └── ca-certificates
+    ├── jpeg-turbo
+    ├── libpng
+    ├── libslirp
+    │   └── glib
+    │       ├── pcre2
+    │       └── gettext
+    ├── libssh
+    │   └── openssl@3
+    │       └── ca-certificates
+    ├── libusb
+    ├── lzo
+    ├── ncurses
+    ├── nettle
+    │   └── gmp
+    ├── pixman
+    ├── snappy
+    ├── vde
+    └── zstd
+        ├── lz4
+        └── xz
+
+lua
+
+lua@5.3
+
+luajit
+
+luv
+└── libuv
+
+lz4
+
+lzo
+
+m4
+
+make
+
+mpdecimal
+
+msgpack
+
+mtr
+└── jansson
+
+ncdu
+└── ncurses
+
+ncurses
+
+neovim
+├── gettext
+├── libtermkey
+│   └── unibilium
+├── libuv
+├── libvterm
+├── luajit
+├── luv
+│   └── libuv
+├── msgpack
+├── tree-sitter
+└── unibilium
+
+nettle
+└── gmp
+
+nmap
+├── liblinear
+├── libssh2
+│   └── openssl@3
+│       └── ca-certificates
+├── lua
+├── openssl@3
+│   └── ca-certificates
+└── pcre
+
+node
+├── brotli
+├── c-ares
+├── icu4c
+├── libnghttp2
+├── libuv
+└── openssl@3
+    └── ca-certificates
+
+oniguruma
+
+openssl@1.1
+└── ca-certificates
+
+openssl@3
+└── ca-certificates
+
+p11-kit
+├── ca-certificates
+└── libtasn1
+
+pcre
+
+pcre2
+
+picocom
+
+pixman
+
+pkg-config
+
+poetry
+├── cffi
+│   ├── pycparser
+│   └── python-setuptools
+├── keyring
+│   ├── cffi
+│   │   ├── pycparser
+│   │   └── python-setuptools
+│   ├── pycparser
+│   └── python@3.12
+│       ├── mpdecimal
+│       ├── openssl@3
+│       │   └── ca-certificates
+│       ├── sqlite
+│       │   └── readline
+│       └── xz
+├── pycparser
+├── python-certifi
+│   └── ca-certificates
+├── python-packaging
+├── python@3.12
+│   ├── mpdecimal
+│   ├── openssl@3
+│   │   └── ca-certificates
+│   ├── sqlite
+│   │   └── readline
+│   └── xz
+└── virtualenv
+    └── python@3.12
+        ├── mpdecimal
+        ├── openssl@3
+        │   └── ca-certificates
+        ├── sqlite
+        │   └── readline
+        └── xz
+
+pre-commit
+├── python@3.12
+│   ├── mpdecimal
+│   ├── openssl@3
+│   │   └── ca-certificates
+│   ├── sqlite
+│   │   └── readline
+│   └── xz
+├── pyyaml
+│   └── libyaml
+└── virtualenv
+    └── python@3.12
+        ├── mpdecimal
+        ├── openssl@3
+        │   └── ca-certificates
+        ├── sqlite
+        │   └── readline
+        └── xz
+
+putty
+
+pycparser
+
+python-build
+├── python-packaging
+└── python-pyproject-hooks
+
+python-certifi
+└── ca-certificates
+
+python-cryptography
+├── cffi
+│   ├── pycparser
+│   └── python-setuptools
+└── openssl@3
+    └── ca-certificates
+
+python-lxml
+
+python-markupsafe
+
+python-packaging
+
+python-pyproject-hooks
+
+python-pytz
+
+python-setuptools
+
+python@3.10
+├── gdbm
+├── mpdecimal
+├── openssl@3
+│   └── ca-certificates
+├── readline
+├── sqlite
+│   └── readline
+└── xz
+
+python@3.11
+├── mpdecimal
+├── openssl@3
+│   └── ca-certificates
+├── sqlite
+│   └── readline
+└── xz
+
+python@3.12
+├── mpdecimal
+├── openssl@3
+│   └── ca-certificates
+├── sqlite
+│   └── readline
+└── xz
+
+python@3.9
+├── gdbm
+├── mpdecimal
+├── openssl@3
+│   └── ca-certificates
+├── readline
+├── sqlite
+│   └── readline
+└── xz
+
+pyyaml
+└── libyaml
+
+qemu
+├── capstone
+├── dtc
+├── glib
+│   ├── pcre2
+│   └── gettext
+├── gnutls
+│   ├── ca-certificates
+│   ├── gmp
+│   ├── libidn2
+│   │   ├── libunistring
+│   │   └── gettext
+│   ├── libtasn1
+│   ├── libunistring
+│   ├── nettle
+│   │   └── gmp
+│   ├── p11-kit
+│   │   ├── ca-certificates
+│   │   └── libtasn1
+│   └── unbound
+│       ├── libevent
+│       │   └── openssl@3
+│       │       └── ca-certificates
+│       ├── libnghttp2
+│       └── openssl@3
+│           └── ca-certificates
+├── jpeg-turbo
+├── libpng
+├── libslirp
+│   └── glib
+│       ├── pcre2
+│       └── gettext
+├── libssh
+│   └── openssl@3
+│       └── ca-certificates
+├── libusb
+├── lzo
+├── ncurses
+├── nettle
+│   └── gmp
+├── pixman
+├── snappy
+├── vde
+└── zstd
+    ├── lz4
+    └── xz
+
+readline
+
+six
+
+snappy
+
+sqlite
+└── readline
+
+tcl-tk
+└── openssl@3
+    └── ca-certificates
+
+tcping
+
+telnet
+
+terraform
+
+tmux
+├── libevent
+│   └── openssl@3
+│       └── ca-certificates
+├── ncurses
+└── utf8proc
+
+tree
+
+tree-sitter
+
+unbound
+├── libevent
+│   └── openssl@3
+│       └── ca-certificates
+├── libnghttp2
+└── openssl@3
+    └── ca-certificates
+
+unibilium
+
+utf8proc
+
+vde
+
+virtualbox
+
+virtualenv
+└── python@3.12
+    ├── mpdecimal
+    ├── openssl@3
+    │   └── ca-certificates
+    ├── sqlite
+    │   └── readline
+    └── xz
+
+watch
+└── ncurses
+
+wget
+├── libidn2
+│   ├── libunistring
+│   └── gettext
+└── openssl@3
+    └── ca-certificates
+
+xz
+
+zstd
+├── lz4
+└── xz
+
