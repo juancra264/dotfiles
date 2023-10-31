@@ -1,7 +1,9 @@
 #!/bin/sh
-mdfind kMDItemKind="Application" > ~/dotfiles/apps/apps_all.txt
-mdfind -onlyin /Applications -onlyin ~/Applications kMDItemKind="Application" > ~/dotfiles/apps/apps.txt
-brew bundle dump --force --file=~/dotfiles/apps/Brewfile
-brew list  > ~/dotfiles/apps/brew_list.txt 
-brew list --cask > ~/dotfiles/apps/brew_listCask.txt 
-brew deps --tree --installed  > ~/dotfiles/apps/brew_depsTree.txt
+local_path="$HOME"/dotfiles/apps
+mdfind kMDItemKind="Application" > "$local_path"/apps_all.txt
+mdfind -onlyin /Applications -onlyin ~/Applications kMDItemKind="Application" > "$local_path"/apps.txt
+brew bundle dump --force --file="$local_path"/Brewfile
+brew list  > "$local_path"/brew_list.txt 
+brew list --cask > "$local_path"/brew_listCask.txt 
+brew deps --tree --installed  > "$local_path"/brew_depsTree.txt
+printenv > "$local_path"/env.txt

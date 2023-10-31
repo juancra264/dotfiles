@@ -1,20 +1,18 @@
 /Applications/Safari.app
-/Applications/qView.app
 /Applications/Firefox.app
+/Applications/Brackets.app
 /Applications/Google Chrome.app
 /Applications/Royal TSX.app
 /Applications/Adobe Acrobat Reader.app
 /Applications/Sublime Text.app
+/Applications/Slack.app
 /Applications/iTerm.app
 /Applications/WhatsApp.app
 /Applications/Visual Studio Code.app
-/Applications/Bitwarden.app
+/Applications/IntelliJ IDEA CE.app
 /Applications/Clipy.app
 /Applications/OpenVPN Connect/OpenVPN Connect.app
 /Applications/OpenVPN Connect/Uninstall OpenVPN Connect.app
-/Applications/Brackets.app
-/Applications/IntelliJ IDEA CE.app
-/Applications/Alfred 5.app
 /Applications/draw.io.app
 /Applications/VLC.app
 /Applications/LibreOffice.app
@@ -39,6 +37,7 @@
 /Applications/Android File Transfer.app
 /Applications/Lightshot Screenshot.app
 /Applications/Arduino.app
+/Applications/qView.app
 /Applications/calibre.app
 /Applications/FortiClient.app
 /Applications/GlobalProtect.app
@@ -93,12 +92,13 @@
 /Applications/Keynote.app
 /Applications/Pages.app
 /Applications/Numbers.app
-/Applications/Slack.app
 /Applications/mhunt.app
 /Applications/VirtualBox.app
 /Applications/DaVinci Resolve/DaVinci Resolve.app
 /Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Applications/Electron.app
 /Applications/AltTab.app
+/Applications/Alfred 5.app
 /Applications/Microsoft Remote Desktop.app
 /Applications/Evernote.app
 /Applications/Notion.app
+/Applications/Bitwarden.app
