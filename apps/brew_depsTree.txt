@@ -1,32 +1,24 @@
 alt-tab
 
 ansible
-├── cffi
-│   ├── pycparser
-│   └── python-setuptools
-├── pycparser
-├── python-certifi
+├── certifi
 │   └── ca-certificates
-├── python-cryptography
+├── cryptography
 │   ├── cffi
-│   │   ├── pycparser
-│   │   └── python-setuptools
+│   │   └── pycparser
 │   └── openssl@3
 │       └── ca-certificates
-├── python-lxml
-├── python-markupsafe
-├── python-packaging
-├── python-pytz
-├── python@3.11
-│   ├── mpdecimal
-│   ├── openssl@3
-│   │   └── ca-certificates
-│   ├── sqlite
-│   │   └── readline
-│   └── xz
-├── pyyaml
-│   └── libyaml
-└── six
+├── libssh
+│   └── openssl@3
+│       └── ca-certificates
+├── libyaml
+└── python@3.12
+    ├── mpdecimal
+    ├── openssl@3
+    │   └── ca-certificates
+    ├── sqlite
+    │   └── readline
+    └── xz
 
 autoconf
 └── m4
@@ -48,9 +40,13 @@ ca-certificates
 
 capstone
 
+certifi
+└── ca-certificates
+
 cffi
-├── pycparser
-└── python-setuptools
+└── pycparser
+
+clipy
 
 colima
 └── lima
@@ -59,6 +55,13 @@ colima
         ├── dtc
         ├── glib
         │   ├── pcre2
+        │   ├── python@3.12
+        │   │   ├── mpdecimal
+        │   │   ├── openssl@3
+        │   │   │   └── ca-certificates
+        │   │   ├── sqlite
+        │   │   │   └── readline
+        │   │   └── xz
         │   └── gettext
         ├── gnutls
         │   ├── ca-certificates
@@ -85,6 +88,13 @@ colima
         ├── libslirp
         │   └── glib
         │       ├── pcre2
+        │       ├── python@3.12
+        │       │   ├── mpdecimal
+        │       │   ├── openssl@3
+        │       │   │   └── ca-certificates
+        │       │   ├── sqlite
+        │       │   │   └── readline
+        │       │   └── xz
         │       └── gettext
         ├── libssh
         │   └── openssl@3
@@ -101,10 +111,18 @@ colima
             ├── lz4
             └── xz
 
+cryptography
+├── cffi
+│   └── pycparser
+└── openssl@3
+    └── ca-certificates
+
 ctop
 
 docker
 └── docker-completion
+
+docker-buildx
 
 docker-completion
 
@@ -116,24 +134,21 @@ dozer
 
 dtc
 
-exa
-└── libgit2
-    ├── libssh2
-    │   └── openssl@3
-    │       └── ca-certificates
-    └── openssl@3
-        └── ca-certificates
-
 fig
 
 fping
+
+fzf
 
 gdbm
 
 gettext
 
+git
+├── gettext
+└── pcre2
+
 glances
-├── python-packaging
 └── python@3.12
     ├── mpdecimal
     ├── openssl@3
@@ -144,6 +159,13 @@ glances
 
 glib
 ├── pcre2
+├── python@3.12
+│   ├── mpdecimal
+│   ├── openssl@3
+│   │   └── ca-certificates
+│   ├── sqlite
+│   │   └── readline
+│   └── xz
 └── gettext
 
 gmp
@@ -174,18 +196,16 @@ gnutls
 go
 
 google-cloud-sdk
-└── python@3.10
-    ├── gdbm
+└── python@3.12
     ├── mpdecimal
     ├── openssl@3
     │   └── ca-certificates
-    ├── readline
     ├── sqlite
     │   └── readline
     └── xz
 
 gping
-└── libgit2@1.6
+└── libgit2
     ├── libssh2
     │   └── openssl@3
     │       └── ca-certificates
@@ -207,20 +227,7 @@ jansson
 
 jpeg-turbo
 
-jsonschema
-└── python@3.11
-    ├── mpdecimal
-    ├── openssl@3
-    │   └── ca-certificates
-    ├── sqlite
-    │   └── readline
-    └── xz
-
 keyring
-├── cffi
-│   ├── pycparser
-│   └── python-setuptools
-├── pycparser
 └── python@3.12
     ├── mpdecimal
     ├── openssl@3
@@ -228,8 +235,6 @@ keyring
     ├── sqlite
     │   └── readline
     └── xz
-
-kitty
 
 libevent
 └── openssl@3
@@ -262,6 +267,13 @@ libpng
 libslirp
 └── glib
     ├── pcre2
+    ├── python@3.12
+    │   ├── mpdecimal
+    │   ├── openssl@3
+    │   │   └── ca-certificates
+    │   ├── sqlite
+    │   │   └── readline
+    │   └── xz
     └── gettext
 
 libssh
@@ -293,6 +305,13 @@ lima
     ├── dtc
     ├── glib
     │   ├── pcre2
+    │   ├── python@3.12
+    │   │   ├── mpdecimal
+    │   │   ├── openssl@3
+    │   │   │   └── ca-certificates
+    │   │   ├── sqlite
+    │   │   │   └── readline
+    │   │   └── xz
     │   └── gettext
     ├── gnutls
     │   ├── ca-certificates
@@ -319,6 +338,13 @@ lima
     ├── libslirp
     │   └── glib
     │       ├── pcre2
+    │       ├── python@3.12
+    │       │   ├── mpdecimal
+    │       │   ├── openssl@3
+    │       │   │   └── ca-certificates
+    │       │   ├── sqlite
+    │       │   │   └── readline
+    │       │   └── xz
     │       └── gettext
     ├── libssh
     │   └── openssl@3
@@ -335,6 +361,8 @@ lima
         ├── lz4
         └── xz
 
+lpeg
+
 lua
 
 lua@5.3
@@ -349,6 +377,8 @@ lz4
 lzo
 
 m4
+
+macdown
 
 make
 
@@ -366,16 +396,20 @@ ncurses
 
 neovim
 ├── gettext
-├── libtermkey
-│   └── unibilium
 ├── libuv
 ├── libvterm
+├── lpeg
 ├── luajit
 ├── luv
 │   └── libuv
 ├── msgpack
 ├── tree-sitter
 └── unibilium
+
+netbirdio/tap/netbird
+
+netbirdio/tap/netbird-ui
+└── netbird
 
 nettle
 └── gmp
@@ -388,7 +422,7 @@ nmap
 ├── lua
 ├── openssl@3
 │   └── ca-certificates
-└── pcre
+└── pcre2
 
 node
 ├── brotli
@@ -422,77 +456,40 @@ pixman
 pkg-config
 
 poetry
-├── cffi
-│   ├── pycparser
-│   └── python-setuptools
-├── keyring
-│   ├── cffi
-│   │   ├── pycparser
-│   │   └── python-setuptools
-│   ├── pycparser
-│   └── python@3.12
-│       ├── mpdecimal
-│       ├── openssl@3
-│       │   └── ca-certificates
-│       ├── sqlite
-│       │   └── readline
-│       └── xz
-├── pycparser
-├── python-certifi
+├── certifi
 │   └── ca-certificates
-├── python-packaging
-├── python@3.12
-│   ├── mpdecimal
-│   ├── openssl@3
-│   │   └── ca-certificates
-│   ├── sqlite
-│   │   └── readline
-│   └── xz
-└── virtualenv
-    └── python@3.12
-        ├── mpdecimal
-        ├── openssl@3
-        │   └── ca-certificates
-        ├── sqlite
-        │   └── readline
-        └── xz
+├── cffi
+│   └── pycparser
+└── python@3.12
+    ├── mpdecimal
+    ├── openssl@3
+    │   └── ca-certificates
+    ├── sqlite
+    │   └── readline
+    └── xz
 
 pre-commit
-├── python@3.12
-│   ├── mpdecimal
-│   ├── openssl@3
-│   │   └── ca-certificates
-│   ├── sqlite
-│   │   └── readline
-│   └── xz
-├── pyyaml
-│   └── libyaml
-└── virtualenv
-    └── python@3.12
-        ├── mpdecimal
-        ├── openssl@3
-        │   └── ca-certificates
-        ├── sqlite
-        │   └── readline
-        └── xz
+├── libyaml
+└── python@3.12
+    ├── mpdecimal
+    ├── openssl@3
+    │   └── ca-certificates
+    ├── sqlite
+    │   └── readline
+    └── xz
 
 putty
 
 pycparser
 
 python-build
-├── python-packaging
-└── python-pyproject-hooks
-
-python-certifi
-└── ca-certificates
-
-python-cryptography
-├── cffi
-│   ├── pycparser
-│   └── python-setuptools
-└── openssl@3
-    └── ca-certificates
+└── python@3.12
+    ├── mpdecimal
+    ├── openssl@3
+    │   └── ca-certificates
+    ├── sqlite
+    │   └── readline
+    └── xz
 
 python-lxml
 
@@ -550,6 +547,13 @@ qemu
 ├── dtc
 ├── glib
 │   ├── pcre2
+│   ├── python@3.12
+│   │   ├── mpdecimal
+│   │   ├── openssl@3
+│   │   │   └── ca-certificates
+│   │   ├── sqlite
+│   │   │   └── readline
+│   │   └── xz
 │   └── gettext
 ├── gnutls
 │   ├── ca-certificates
@@ -576,6 +580,13 @@ qemu
 ├── libslirp
 │   └── glib
 │       ├── pcre2
+│       ├── python@3.12
+│       │   ├── mpdecimal
+│       │   ├── openssl@3
+│       │   │   └── ca-certificates
+│       │   ├── sqlite
+│       │   │   └── readline
+│       │   └── xz
 │       └── gettext
 ├── libssh
 │   └── openssl@3
@@ -592,14 +603,20 @@ qemu
     ├── lz4
     └── xz
 
+qview
+
 readline
 
 six
 
 snappy
 
+teamookla/speedtest/speedtest
+
 sqlite
 └── readline
+
+sublime-text
 
 tcl-tk
 └── openssl@3
@@ -636,8 +653,6 @@ utf8proc
 
 vde
 
-virtualbox
-
 virtualenv
 └── python@3.12
     ├── mpdecimal
@@ -658,6 +673,12 @@ wget
     └── ca-certificates
 
 xz
+
+zsh
+├── pcre
+└── ncurses
+
+zsh-syntax-highlighting
 
 zstd
 ├── lz4

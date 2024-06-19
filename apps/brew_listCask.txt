@@ -1,6 +1,9 @@
 alt-tab
+clipy
 dozer
 fig
 google-cloud-sdk
-kitty
-virtualbox
+macdown
+netbird-ui
+qview
+sublime-text

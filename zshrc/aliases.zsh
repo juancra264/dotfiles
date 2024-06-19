@@ -1,6 +1,6 @@
 # System shortcuts
 alias sr='source ~/.zshrc'
-alias ls="exa --color=auto"
+#alias ls="exa --color=auto"
 alias cat="bat --color=auto --plain"
 alias grep="grep --color=auto"
 alias vim="nvim"

@@ -14,9 +14,9 @@ brew tap homebrew/bundle
 brew bundle --file $HOME/dotfiles/brew/Brewfile
 
 # for kitty config
-rm -rf $HOME/.config/kitty/kitty.conf
-mkdir -p $HOME/.config/kitty
-ln -s $HOME/dotfiles/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
+#rm -rf $HOME/.config/kitty/kitty.conf
+#mkdir -p $HOME/.config/kitty
+#ln -s $HOME/dotfiles/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 
 # for vim
 rm -rf $HOME/.vimrc
