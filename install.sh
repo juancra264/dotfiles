@@ -22,6 +22,10 @@ brew bundle --file $HOME/dotfiles/brew/Brewfile
 rm -rf $HOME/.vimrc
 ln -s $HOME/dotfiles/vim/vimrc $HOME/.vimrc
 
+# for tmux
+rm -rf $HOME/.tmux.conf
+ln -s $HOME/dotfiles/tmux/tmux.conf $HOME/.tmux.conf
+
 # for power level 10k
 rm -rf $HOME/.p10k.zsh
 ln -s $HOME/dotfiles/p10k/p10k.zsh $HOME/.p10k.zsh
