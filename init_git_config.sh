@@ -1,3 +1,3 @@
-git config --global user.name "juaramirez"
-git config --global user.email "juan.jramirez@mercadolibre.com.co"
-git config --global user.username "juaramirez"
+git config --global user.name "juancra264"
+git config --global user.email "juancra264@hotmail.com"
+git config --global user.username "juancra264"
