@@ -26,6 +26,11 @@ ln -s $HOME/dotfiles/vim/vimrc $HOME/.vimrc
 rm -rf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/tmux/tmux.conf $HOME/.tmux.conf
 
+# Plugin Manager - https://github.com/tmux-plugins/tpm
+# If you didn't use my dotfiles install script you'll need to:
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+
 # for power level 10k
 rm -rf $HOME/.p10k.zsh
 ln -s $HOME/dotfiles/p10k/p10k.zsh $HOME/.p10k.zsh
