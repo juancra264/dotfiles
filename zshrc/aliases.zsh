@@ -25,4 +25,4 @@ alias pingmon="python3 /Users/juaramirez/dev/pingmon/pingmon.py"
 
 alias curltime="curl -o /dev/null -s -w 'Total: %{time_total}s\n'"
 #alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
-alias control='ssh jcramirez@control.radutech.site -t "tmux new-session -s work || tmux attach-session -t work"'
+alias control='ssh jcramirez@control.netbird.cloud -t "tmux new-session -s work || tmux attach-session -t work"'
