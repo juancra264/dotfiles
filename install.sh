@@ -38,3 +38,8 @@ ln -s $HOME/dotfiles/p10k/p10k.zsh $HOME/.p10k.zsh
 # for git config
 rm -rf $HOME/.gitconfig
 ln -s $HOME/dotfiles/git/gitconfig $HOME/.gitconfig
+
+# Installing VIM pluggins for HCL (hcl.vim)
+mkdir -p ~/.vim/pack/jvirtanen/start
+cd ~/.vim/pack/jvirtanen/start
+git clone https://github.com/jvirtanen/vim-hcl.git
