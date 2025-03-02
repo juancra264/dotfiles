@@ -7,3 +7,4 @@ macdown
 netbird-ui
 qview
 sublime-text
+warp
