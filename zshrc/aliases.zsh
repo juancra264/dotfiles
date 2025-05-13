@@ -28,3 +28,4 @@ alias curltime="curl -o /dev/null -s -w 'Total: %{time_total}s\n'"
 alias control='ssh jcramirez@control.netbird.cloud -t "tmux new-session -s work || tmux attach-session -t work"'
 
 alias work='tmux a -t work'
+alias python="python3"
