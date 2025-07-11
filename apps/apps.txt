@@ -1,36 +1,48 @@
 /Applications/Safari.app
-/Applications/qView.app
-/Applications/Adobe Acrobat Reader.app
-/Applications/Netbird UI.app
-/Applications/Microsoft Remote Desktop.app
-/Applications/iTerm.app
-/Applications/Firefox.app
-/Applications/Google Chrome.app
-/Applications/Foxit PDF Reader.app
-/Applications/Visual Studio Code.app
-/Applications/Bitwarden.app
 /Applications/Lightshot Screenshot.app
 /Applications/Dozer.app
-/Applications/Remote Ripple.app
-/Applications/Rectangle.app
-/Applications/iStat Menus.app
-/Applications/draw.io.app
+/Applications/Microsoft Outlook.app
+/Applications/Google Chrome.app
 /Applications/Clipy.app
+/Applications/Rectangle.app
+/Applications/(A Document Being Saved By Sparkle)/WhatsApp.app
+/Applications/Alfred 5.app
+/Applications/Warp.app
+/Applications/WhatsApp.app
+/Applications/Firefox.app
+/Applications/Foxit PDF Reader.app
+/Applications/qView.app
+/Applications/draw.io.app
 /Applications/MacDown.app
 /Applications/Eve Client.app
 /Applications/VNC Viewer.app
-/Applications/AltTab.app
 /Applications/Fig.app
 /Applications/Eve Wireshark.app
 /Applications/Keka.app
 /Applications/FileZilla.app
 /Applications/LibreOffice.app
 /Applications/Insomnia.app
-/Applications/Alfred 5.app
-/Applications/Sublime Text.app
+/Applications/Remote Ripple.app
 /Applications/Postman.app
-/Applications/Vivaldi.app
+/Applications/balenaEtcher.app
 /Applications/USBImager.app
-/Applications/WhatsApp.app
+/Applications/Adobe Acrobat Reader.app
+/Applications/Microsoft To Do.app
 /Applications/Spotify.app
+/Applications/Vivaldi.app
+/Applications/Notion.app
+/Applications/Disk Inspector.app
+/Applications/Discord.app
+/Applications/Sublime Text.app
 /Applications/VMware Fusion.app
+/Applications/AltTab.app
+/Applications/Visual Studio Code.app
+/Applications/Windows App.app
+/Applications/Bitwarden.app
+/Applications/Evernote.app
+/Applications/NetBird.app
+/Applications/iTerm.app
+/Applications/iStat Menus.app
+/Applications/zoom.us.app
+/Applications/Hex Fiend.app
+/Applications/Netbird UI.app
