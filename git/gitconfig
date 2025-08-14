@@ -4,3 +4,6 @@
 	username = juancra264
 [core]
 	hooksPath = /Users/juaramirez/.config/git/hooks/
+
+[init]
+	defaultBranch = main
