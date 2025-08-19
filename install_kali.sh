@@ -201,20 +201,8 @@ case "$OS" in
     sudo curl -fsS https://dl.brave.com/install.sh | sh
 
     echo "##################################################################"
-    echo " Installing OMZ"
+    echo " Install Oh-my-zsh and power level"
     echo "##################################################################"
-    sudo apt-get install -y zsh zsh-syntax-highlighting zsh-autosuggestions -y
-    rm -rf ~/.oh-my-zsh
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    cp /etc/skel/.zshrc ~/.zshrc
-    chsh -s $(which zsh)
-
-    echo "##################################################################"
-    echo " Installing Powerlevel10k"
-    echo "##################################################################"
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
     ;;
   'freebsd'|'openbsd'|'netbsd')
