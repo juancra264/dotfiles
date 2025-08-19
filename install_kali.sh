@@ -93,14 +93,14 @@ esac
 case "$OS" in
   'linux')
     #For Linux Systems
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " This is a linux"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt install openssh-server -y
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Upgrading"
-    echo "##################################################################"    
+    echo "###############################################################################"
     sudo apt upgrade
     sudo apt dist-upgrade -y
     sudo apt-get full-upgrade -y
@@ -108,44 +108,44 @@ case "$OS" in
     sudo apt install -y linux-headers-$(uname -r)
     sudo apt-get install linux-headers-amd64 linux-image-amd64
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Installing basic packages"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli -y 
     sudo apt install wireshark git tmux guake python3 python3-pip tlp jq -y
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Installing Security Packages"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt install tilix maltego metasploit-framework burpsuite aircrack-ng -y 
     sudo apt install hydra nmap beef-xss nikto wavemon -y
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Installing dependencies for kismet"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt install build-essential git libwebsockets-dev pkg-config zlib1g-dev -y
     sudo apt install libnl-3-dev libnl-genl-3-dev libcap-dev libpcap-dev libnm-dev -y 
     sudo apt install libdw-dev libsqlite3-dev libprotobuf-dev libprotobuf-c-dev -y 
     sudo apt install protobuf-compiler protobuf-c-compiler -y 
     sudo apt install libusb-1.0-0-dev -y
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Installing pytho3 packages"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt install python3 python3-setuptools python3-protobuf python3-requests -y
     sudo apt install python3-numpy python3-serial python3-usb python3-dev -y 
     sudo apt install python3-websockets librtlsdr0 libubertooth-dev libbtbb-dev -y
     sudo apt-get install python3-setuptools python3-protobuf python3-requests -y
     sudo apt-get install librtlsdr0 python3-usb python3-paho-mqtt -y
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Installing libusb"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt-get install libusb-1.0-0-dev
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo "Installing GQRX"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt update
     sudo apt-get install software-properties-common
     sudo apt-get install python3-launchpadlib
@@ -153,20 +153,20 @@ case "$OS" in
     sudo apt-get update
     sudo apt-get install gqrx-sdr -y
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Compiling kismet"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt -y install kismet
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Installing yubi authenticator"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt-get update
     sudo apt install yubioath-desktop -y
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Installing Netbird client"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt-get update
     sudo apt-get install ca-certificates curl gnupg -y
     curl -sSL https://pkgs.netbird.io/debian/public.key | sudo gpg --dearmor --output /usr/share/keyrings/netbird-archive-keyring.gpg
@@ -175,14 +175,14 @@ case "$OS" in
     sudo apt-get install netbird -y
     sudo apt-get install netbird-ui -y
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Installing GPS tools"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt install gpsd gpsd-clients libgps-dev -y
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Installing RTL8812AU/21AU and RTL8814AU Wireless drivers"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo apt update
     sudo apt upgrade -y
     #sudo apt install linux-headers-generic build-essential git -y
@@ -196,14 +196,14 @@ case "$OS" in
     sudo cp rtw88.conf /etc/modprobe.d/
     cd $SCRIPT_DIR
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Installing brave"
-    echo "##################################################################"
+    echo "###############################################################################"
     sudo curl -fsS https://dl.brave.com/install.sh | sh
 
-    echo "##################################################################"
+    echo "###############################################################################"
     echo " Install Oh-my-zsh and power level"
-    echo "##################################################################"
+    echo "###############################################################################"
 
     ;;
   'freebsd'|'openbsd'|'netbsd')
