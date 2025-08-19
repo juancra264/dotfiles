@@ -274,7 +274,6 @@ mkdir -p ~/.vim/pack/jvirtanen/start
 cd ~/.vim/pack/jvirtanen/start
 git clone https://github.com/jvirtanen/vim-hcl.git
 
-
 echo "###############################################################################"
 echo " Restoring Power Level 10K"
 echo "###############################################################################"
