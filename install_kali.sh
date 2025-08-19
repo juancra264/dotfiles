@@ -256,8 +256,8 @@ echo " Installing TMUX pluggings"
 echo "###############################################################################"
 # Plugin Manager - https://github.com/tmux-plugins/tpm
 # If you didn't use my dotfiles install script you'll need to:
+rm -rf ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
 
 # for git config
 echo "###############################################################################"
