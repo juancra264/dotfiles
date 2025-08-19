@@ -146,12 +146,13 @@ case "$OS" in
     echo "##################################################################"
     sudo apt update
     sudo apt-get install software-properties-common
+    sudo apt-get install python3-launchpadlib
     sudo apt update
-    sudo add-apt-repository ppa:bladerf/bladerf
-    sudo add-apt-repository ppa:ettusresearch/uhd
-    sudo add-apt-repository ppa:myriadrf/drivers
-    sudo add-apt-repository ppa:myriadrf/gnuradio
-    sudo add-apt-repository ppa:gqrx/gqrx-sdr
+    sudo add-apt-repository ppa:bladerf/bladerf -y
+    sudo add-apt-repository ppa:ettusresearch/uhd -y
+    sudo add-apt-repository ppa:myriadrf/drivers -y
+    sudo add-apt-repository ppa:myriadrf/gnuradio -y
+    sudo add-apt-repository ppa:gqrx/gqrx-sdr -y
     sudo apt-get update
     sudo apt-get install gqrx-sdr -y
 
