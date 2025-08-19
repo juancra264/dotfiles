@@ -106,20 +106,6 @@ case "$OS" in
     sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli -y 
     sudo apt install wireshark git tmux guake python3 python3-pip tlp -y
 
-    printf "\n Installing brave"
-    sudo curl -fsS https://dl.brave.com/install.sh | sh
-
-    printf "\n Installing OMZ"
-    sudo apt-get install -y zsh zsh-syntax-highlighting zsh-autosuggestions -y
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    cp /etc/skel/.zshrc ~/.zshrc
-    chsh -s $(which zsh)
-
-    printf "\n Installing Powerlevel10k"
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-
     printf "\n Installing Security Packages"
     sudo apt install tilix maltego metasploit-framework burpsuite aircrack-ng -y 
     sudo apt install hydra nmap beef-xss nikto wavemon -y
@@ -130,7 +116,6 @@ case "$OS" in
     sudo apt install libdw-dev libsqlite3-dev libprotobuf-dev libprotobuf-c-dev -y 
     sudo apt install protobuf-compiler protobuf-c-compiler libsensors4-dev -y 
     sudo apt install libusb-1.0-0-dev -y
-
 
     printf "\n Installing pytho3 packages"
     sudo apt install python3 python3-setuptools python3-protobuf python3-requests -y
@@ -185,6 +170,19 @@ case "$OS" in
     sudo make install_fw
     sudo cp rtw88.conf /etc/modprobe.d/
 
+    printf "\n Installing brave"
+    sudo curl -fsS https://dl.brave.com/install.sh | sh
+
+    printf "\n Installing OMZ"
+    sudo apt-get install -y zsh zsh-syntax-highlighting zsh-autosuggestions -y
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    cp /etc/skel/.zshrc ~/.zshrc
+    chsh -s $(which zsh)
+
+    printf "\n Installing Powerlevel10k"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
     ;;
   'freebsd'|'openbsd'|'netbsd')
