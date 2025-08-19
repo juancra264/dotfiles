@@ -114,7 +114,7 @@ case "$OS" in
     sudo apt install build-essential git libwebsockets-dev pkg-config zlib1g-dev -y
     sudo apt install libnl-3-dev libnl-genl-3-dev libcap-dev libpcap-dev libnm-dev -y 
     sudo apt install libdw-dev libsqlite3-dev libprotobuf-dev libprotobuf-c-dev -y 
-    sudo apt install protobuf-compiler protobuf-c-compiler libsensors4-dev -y 
+    sudo apt install protobuf-compiler protobuf-c-compiler -y 
     sudo apt install libusb-1.0-0-dev -y
 
     printf "\n Installing pytho3 packages"
