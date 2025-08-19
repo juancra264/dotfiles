@@ -106,12 +106,13 @@ case "$OS" in
     sudo apt-get full-upgrade -y
     sudo apt autoremove -y
     sudo apt install -y linux-headers-$(uname -r)
+    sudo apt-get install linux-headers-amd64 linux-image-amd64
 
     echo "##################################################################"
     echo " Installing basic packages"
     echo "##################################################################"
     sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli -y 
-    sudo apt install wireshark git tmux guake python3 python3-pip tlp -y
+    sudo apt install wireshark git tmux guake python3 python3-pip tlp jq -y
 
     echo "##################################################################"
     echo " Installing Security Packages"
