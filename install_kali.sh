@@ -144,11 +144,14 @@ case "$OS" in
     echo "##################################################################"
     echo "Installing GQRX"
     echo "##################################################################"
-    sudo add-apt-repository -y ppa:bladerf/bladerf
-    sudo add-apt-repository -y ppa:ettusresearch/uhd
-    sudo add-apt-repository -y ppa:myriadrf/drivers
-    sudo add-apt-repository -y ppa:myriadrf/gnuradio
-    sudo add-apt-repository -y ppa:gqrx/gqrx-sdr
+    sudo apt update
+    sudo apt-get install software-properties-common
+    sudo apt update
+    sudo add-apt-repository ppa:bladerf/bladerf
+    sudo add-apt-repository ppa:ettusresearch/uhd
+    sudo add-apt-repository ppa:myriadrf/drivers
+    sudo add-apt-repository ppa:myriadrf/gnuradio
+    sudo add-apt-repository ppa:gqrx/gqrx-sdr
     sudo apt-get update
     sudo apt-get install gqrx-sdr -y
 
