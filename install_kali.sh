@@ -184,7 +184,7 @@ case "$OS" in
     echo "##################################################################"
     sudo apt update
     sudo apt upgrade -y
-    sudo apt install linux-headers-generic build-essential git -y
+    #sudo apt install linux-headers-generic build-essential git -y
     sudo apt install dkms -y
     cd $HOME
     git clone https://github.com/lwfinger/rtw88
