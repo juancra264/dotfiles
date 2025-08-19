@@ -155,14 +155,7 @@ case "$OS" in
     echo "##################################################################"
     echo " Compiling kismet"
     echo "##################################################################"
-    cd $HOME
-    git clone --recursive https://github.com/kismetwireless/kismet.git
-    cd $HOME/kismet
-    ./configure
-    make -j$(nproc)
-    sudo make suidinstall
-    sudo usermod -a -G kismet $USER
-    cd $SCRIPT_DIR
+    sudo apt -y install kismet
 
     echo "##################################################################"
     echo " Installing yubi authenticator"
