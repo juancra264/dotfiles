@@ -177,7 +177,7 @@ case "$OS" in
     echo "##################################################################"
     echo " Installing GPS tools"
     echo "##################################################################"
-    sudo apt install gpsd gpsd-clients libgps-dev libgps -y
+    sudo apt install gpsd gpsd-clients libgps-dev -y
 
     echo "##################################################################"
     echo " Installing RTL8812AU/21AU and RTL8814AU Wireless drivers"
