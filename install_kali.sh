@@ -13,6 +13,7 @@ reset=$(tput sgr0)
 # #############################################################################
 ## Global Variables
 # #############################################################################
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
 # #############################################################################
 # ## Functions Declarations
@@ -161,7 +162,7 @@ case "$OS" in
     make -j$(nproc)
     sudo make suidinstall
     sudo usermod -a -G kismet $USER
-    cd $HOME
+    cd $SCRIPT_DIR
 
     echo "##################################################################"
     echo " Installing yubi authenticator"
