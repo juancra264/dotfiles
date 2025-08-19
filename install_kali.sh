@@ -187,6 +187,7 @@ case "$OS" in
     sudo apt upgrade -y
     #sudo apt install linux-headers-generic build-essential git -y
     sudo apt install dkms -y
+    rm -rf $HOME/rtw88
     cd $HOME
     git clone https://github.com/lwfinger/rtw88
     cd $HOME/rtw88
