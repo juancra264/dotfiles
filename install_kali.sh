@@ -121,7 +121,7 @@ case "$OS" in
     sudo apt install python3 python3-setuptools python3-protobuf python3-requests -y
     sudo apt install python3-numpy python3-serial python3-usb python3-dev -y 
     sudo apt install python3-websockets librtlsdr0 libubertooth-dev libbtbb-dev -y
-    sudo apt-get install python python3-setuptools python3-protobuf python3-requests -y
+    sudo apt-get install python3-setuptools python3-protobuf python3-requests -y
     sudo apt-get install librtlsdr0 python3-usb python3-paho-mqtt -y
 
     printf "\n Installing libusb"
