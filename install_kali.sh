@@ -188,7 +188,7 @@ case "$OS" in
     sudo apt install dkms -y
     cd $HOME
     git clone https://github.com/lwfinger/rtw88
-    cd rtw88
+    cd $HOME/rtw88
     make
     sudo make install
     sudo make install_fw
