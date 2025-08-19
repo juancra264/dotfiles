@@ -92,42 +92,58 @@ esac
 case "$OS" in
   'linux')
     #For Linux Systems
-    printf "\n This is a linux"
+    echo "##################################################################"
+    echo " This is a linux"
+    echo "##################################################################"
     sudo apt install openssh-server -y
 
-    printf "\n Upgrading"
+    echo "##################################################################"
+    echo " Upgrading"
+    echo "##################################################################"    
     sudo apt upgrade
     sudo apt dist-upgrade -y
     sudo apt-get full-upgrade -y
     sudo apt autoremove -y
     sudo apt install -y linux-headers-$(uname -r)
 
-    printf "\n Installing basic packages"
+    echo "##################################################################"
+    echo " Installing basic packages"
+    echo "##################################################################"
     sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli -y 
     sudo apt install wireshark git tmux guake python3 python3-pip tlp -y
 
-    printf "\n Installing Security Packages"
+    echo "##################################################################"
+    echo " Installing Security Packages"
+    echo "##################################################################"
     sudo apt install tilix maltego metasploit-framework burpsuite aircrack-ng -y 
     sudo apt install hydra nmap beef-xss nikto wavemon -y
 
-    printf "\n Installing dependencies for kismet"
+    echo "##################################################################"
+    echo " Installing dependencies for kismet"
+    echo "##################################################################"
     sudo apt install build-essential git libwebsockets-dev pkg-config zlib1g-dev -y
     sudo apt install libnl-3-dev libnl-genl-3-dev libcap-dev libpcap-dev libnm-dev -y 
     sudo apt install libdw-dev libsqlite3-dev libprotobuf-dev libprotobuf-c-dev -y 
     sudo apt install protobuf-compiler protobuf-c-compiler -y 
     sudo apt install libusb-1.0-0-dev -y
 
-    printf "\n Installing pytho3 packages"
+    echo "##################################################################"
+    echo " Installing pytho3 packages"
+    echo "##################################################################"
     sudo apt install python3 python3-setuptools python3-protobuf python3-requests -y
     sudo apt install python3-numpy python3-serial python3-usb python3-dev -y 
     sudo apt install python3-websockets librtlsdr0 libubertooth-dev libbtbb-dev -y
     sudo apt-get install python3-setuptools python3-protobuf python3-requests -y
     sudo apt-get install librtlsdr0 python3-usb python3-paho-mqtt -y
 
-    printf "\n Installing libusb"
+    echo "##################################################################"
+    echo " Installing libusb"
+    echo "##################################################################"
     sudo apt-get install libusb-1.0-0-dev
 
+    echo "##################################################################"
     echo "Installing GQRX"
+    echo "##################################################################"
     sudo add-apt-repository -y ppa:bladerf/bladerf
     sudo add-apt-repository -y ppa:ettusresearch/uhd
     sudo add-apt-repository -y ppa:myriadrf/drivers
@@ -136,7 +152,9 @@ case "$OS" in
     sudo apt-get update
     sudo apt-get install gqrx-sdr -y
 
-    printf "\n Compiling kismet"
+    echo "##################################################################"
+    echo " Compiling kismet"
+    echo "##################################################################"
     cd $HOME
     git clone --recursive https://github.com/kismetwireless/kismet.git
     cd $HOME/kismet
@@ -146,13 +164,17 @@ case "$OS" in
     sudo usermod -a -G kismet $USER
     cd $HOME
 
-    printf "\n Installing yubi authenticator"
+    echo "##################################################################"
+    echo " Installing yubi authenticator"
+    echo "##################################################################"
     sudo add-apt-repository ppa:yubico/stable
     sudo apt-get update
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 32CBA1A9
     sudo apt install yubioath-desktop -y
 
-    printf "\n Installing Netbird client"
+    echo "##################################################################"
+    echo " Installing Netbird client"
+    echo "##################################################################"
     sudo apt-get update
     sudo apt-get install ca-certificates curl gnupg -y
     curl -sSL https://pkgs.netbird.io/debian/public.key 
@@ -163,10 +185,14 @@ case "$OS" in
     sudo apt-get install netbird -y
     sudo apt-get install netbird-ui -y
 
-    printf "\n Installing GPS tools"
+    echo "##################################################################"
+    echo " Installing GPS tools"
+    echo "##################################################################"
     sudo apt install gpsd gpsd-clients libgps-dev libgps -y
 
-    printf "\n Installing RTL8812AU/21AU and RTL8814AU Wireless drivers"
+    echo "##################################################################"
+    echo " Installing RTL8812AU/21AU and RTL8814AU Wireless drivers"
+    echo "##################################################################"
     sudo apt update
     sudo apt upgrade -y
     sudo apt install linux-headers-generic build-essential git -y
@@ -179,28 +205,34 @@ case "$OS" in
     sudo make install_fw
     sudo cp rtw88.conf /etc/modprobe.d/
 
-    printf "\n Installing brave"
+    echo "##################################################################"
+    echo " Installing brave"
+    echo "##################################################################"
     sudo curl -fsS https://dl.brave.com/install.sh | sh
 
-    printf "\n Installing OMZ"
+    echo "##################################################################"
+    echo " Installing OMZ"
+    echo "##################################################################"
     sudo apt-get install -y zsh zsh-syntax-highlighting zsh-autosuggestions -y
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     cp /etc/skel/.zshrc ~/.zshrc
     chsh -s $(which zsh)
 
-    printf "\n Installing Powerlevel10k"
+    echo "##################################################################"
+    echo " Installing Powerlevel10k"
+    echo "##################################################################"
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
     echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
     ;;
   'freebsd'|'openbsd'|'netbsd')
     #For bsd Systems
-    printf "\n This is a bsd"
+    echo " This is a bsd"
     ;;
   'osx')
     #For MacOS systems
-    printf "\n This is a MacOS: "
+    echo " This is a MacOS: "
     echo "Setting up your Mac..."
 
     # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
