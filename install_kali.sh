@@ -238,26 +238,46 @@ case "$OS" in
 esac
 
 # for vim
+echo "###############################################################################"
+echo " Configuring VIM"
+echo "###############################################################################"
 rm -rf $HOME/.vimrc
 ln -s $HOME/dotfiles/vim/vimrc $HOME/.vimrc
 
 # for tmux
+echo "###############################################################################"
+echo " Configuring TMUX"
+echo "###############################################################################"
 rm -rf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/tmux/tmux.conf $HOME/.tmux.conf
 
+echo "###############################################################################"
+echo " Installing TMUX pluggings"
+echo "###############################################################################"
 # Plugin Manager - https://github.com/tmux-plugins/tpm
 # If you didn't use my dotfiles install script you'll need to:
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+
 # for git config
+echo "###############################################################################"
+echo " Configuring TMUX"
+echo "###############################################################################"
 rm -rf $HOME/.gitconfig
 ln -s $HOME/dotfiles/git/gitconfig $HOME/.gitconfig
 
 # Installing VIM pluggins for HCL (hcl.vim)
+echo "###############################################################################"
+echo " Configuring HCL for VIM"
+echo "###############################################################################"
 mkdir -p ~/.vim/pack/jvirtanen/start
 cd ~/.vim/pack/jvirtanen/start
 git clone https://github.com/jvirtanen/vim-hcl.git
 
+
+echo "###############################################################################"
+echo " Restoring Power Level 10K"
+echo "###############################################################################"
 read -r -p "Want to restore powerleve 10k config file from this repo? [y/N]" -n 1
 echo # (optional) move to a new line
 if [[ "$REPLY" =~ ^[Yy]$ ]]; then
@@ -265,5 +285,9 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     rm -rf $HOME/.p10k.zsh
     ln -s $HOME/dotfiles/p10k/p10k.zsh $HOME/.p10k.zsh
 fi
+
+echo "###############################################################################"
+echo " Installing and configuration done!!!! "
+echo "###############################################################################"
 
 exit 0
