@@ -204,6 +204,7 @@ case "$OS" in
     echo " Installing OMZ"
     echo "##################################################################"
     sudo apt-get install -y zsh zsh-syntax-highlighting zsh-autosuggestions -y
+    rm -rf ~/.oh-my-zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     cp /etc/skel/.zshrc ~/.zshrc
