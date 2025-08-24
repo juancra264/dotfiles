@@ -205,7 +205,13 @@ case "$OS" in
     echo "###############################################################################"
     echo " Install Oh-my-zsh and power level"
     echo "###############################################################################"
-
+    sudo sudo apt-get install -y zsh zsh-syntax-highlighting zsh-autosuggestions -y
+    echo " execute:"
+    echo '   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" '
+    echo '   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions '
+    echo '   cp /etc/skel/.zshrc ~/.zshrc'
+    echo '   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k '
+    echo '   echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc '
     ;;
   'freebsd'|'openbsd'|'netbsd')
     #For bsd Systems
@@ -286,7 +292,7 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
 fi
 
 echo "###############################################################################"
-echo " Installing and configuration done!!!! "
+echo " Installing and configuration complete !!!! "
 echo "###############################################################################"
 
 exit 0
