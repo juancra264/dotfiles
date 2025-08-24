@@ -112,7 +112,7 @@ case "$OS" in
     echo " Installing basic packages"
     echo "###############################################################################"
     sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli -y 
-    sudo apt install wireshark git tmux guake python3 python3-pip tlp jq -y
+    sudo apt install wireshark git tmux guake python3 python3-pip tlp jq remmina -y
 
     echo "###############################################################################"
     echo " Installing Security Packages"
