@@ -291,6 +291,7 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     ln -s $HOME/dotfiles/p10k/p10k.zsh $HOME/.p10k.zsh
 fi
 
+echo " "
 echo "###############################################################################"
 echo " Installing and configuration complete !!!! "
 echo "###############################################################################"
