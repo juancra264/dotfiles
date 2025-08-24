@@ -105,7 +105,7 @@ case "$OS" in
     sudo apt dist-upgrade -y
     sudo apt-get full-upgrade -y
     sudo apt autoremove -y
-    sudo apt install -y linux-headers-$(uname -r)
+    #sudo apt install -y linux-headers-$(uname -r)
     sudo apt-get install linux-headers-amd64 linux-image-amd64 -y
 
     echo "###############################################################################"
