@@ -115,6 +115,13 @@ case "$OS" in
     sudo apt install wireshark git tmux guake python3 python3-pip tlp jq remmina -y
 
     echo "###############################################################################"
+    echo " Installing bluetooth manager"
+    echo "###############################################################################"
+    sudo apt install blueman -y 
+    sudo systemctl enable bluetooth.service
+    sudo systemctl start bluetooth.service
+
+    echo "###############################################################################"
     echo " Installing Security Packages"
     echo "###############################################################################"
     sudo apt install tilix maltego metasploit-framework burpsuite aircrack-ng -y 
