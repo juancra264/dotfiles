@@ -210,6 +210,19 @@ case "$OS" in
     sudo curl -fsS https://dl.brave.com/install.sh | sh
 
     echo "###############################################################################"
+    echo " Installing Spotify"
+    echo "###############################################################################"
+    read -r -p "Want install spotify? [y/N]" -n 1
+    echo # (optional) move to a new line
+    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+        # Spotify installation on Ubuntu
+        curl -sS https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+        echo "deb https://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+        sudo apt-get update 
+        sudo apt-get install spotify-client -y
+    fi
+
+    echo "###############################################################################"
     echo " Install Oh-my-zsh and power level"
     echo "###############################################################################"
     sudo sudo apt-get install -y zsh zsh-syntax-highlighting zsh-autosuggestions -y
@@ -220,6 +233,7 @@ case "$OS" in
     echo '   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k '
     echo '   echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc '
     ;;
+
   'freebsd'|'openbsd'|'netbsd')
     #For bsd Systems
     echo " This is a bsd"
@@ -280,12 +294,12 @@ rm -rf $HOME/.gitconfig
 ln -s $HOME/dotfiles/git/gitconfig $HOME/.gitconfig
 
 # Installing VIM pluggins for HCL (hcl.vim)
-echo "###############################################################################"
-echo " Configuring HCL for VIM"
-echo "###############################################################################"
-mkdir -p ~/.vim/pack/jvirtanen/start
-cd ~/.vim/pack/jvirtanen/start
-git clone https://github.com/jvirtanen/vim-hcl.git
+#echo "###############################################################################"
+#echo " Configuring HCL for VIM"
+#echo "###############################################################################"
+#mkdir -p ~/.vim/pack/jvirtanen/start
+#cd ~/.vim/pack/jvirtanen/start
+#git clone https://github.com/jvirtanen/vim-hcl.git
 
 echo "###############################################################################"
 echo " Restoring Power Level 10K"
@@ -297,6 +311,7 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     rm -rf $HOME/.p10k.zsh
     ln -s $HOME/dotfiles/p10k/p10k.zsh $HOME/.p10k.zsh
 fi
+
 
 echo " "
 echo "###############################################################################"
