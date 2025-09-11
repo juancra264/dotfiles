@@ -25,7 +25,9 @@ alias pingmon="python3 /Users/juaramirez/dev/pingmon/pingmon.py"
 
 alias curltime="curl -o /dev/null -s -w 'Total: %{time_total}s\n'"
 #alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
-alias control='ssh jcramirez@control.netbird.cloud -t "tmux new-session -s work || tmux attach-session -t work"'
+#alias control='ssh jcramirez@control.netbird.cloud -t "tmux new-session -s work || tmux attach-session -t work"'
+alias control="mosh jcramirez@control.ramdur.com -- sh -c 'tmux attach-session -t ws || tmux new-session -s ws'"
+alias control02="mosh jcramirez@control02.ramdur.com -- sh -c 'tmux attach-session -t ws || tmux new-session -s ws'"
 
 alias work='tmux a -t work'
 alias python="python3"
