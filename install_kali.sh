@@ -222,6 +222,14 @@ case "$OS" in
     sudo curl -fsS https://dl.brave.com/install.sh | sh
 
     echo "###############################################################################"
+    echo " Installing Mullvad"
+    echo "###############################################################################"
+    sudo curl -fsSLo /usr/share/keyrings/mullvad-keyring.asc https://repository.mullvad.net/deb/mullvad-keyring.asc
+    echo "deb [signed-by=/usr/share/keyrings/mullvad-keyring.asc arch=$( dpkg --print-architecture )] https://repository.mullvad.net/deb/stable stable main" | sudo tee /etc/apt/sources.list.d/mullvad.list
+    sudo apt update
+    sudo apt install mullvad-browser
+
+    echo "###############################################################################"
     echo " Installing Spotify"
     echo "###############################################################################"
     read -r -p "Want install spotify? [y/N]" -n 1
