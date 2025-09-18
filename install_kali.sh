@@ -202,19 +202,23 @@ case "$OS" in
     echo "###############################################################################"
     echo " Installing RTL8812AU/21AU and RTL8814AU Wireless drivers"
     echo "###############################################################################"
-    sudo apt update
-    sudo apt upgrade -y
-    #sudo apt install linux-headers-generic build-essential git -y
-    sudo apt install dkms -y
-    rm -rf $HOME/rtw88
-    cd $HOME
-    git clone https://github.com/lwfinger/rtw88
-    cd $HOME/rtw88
-    make
-    sudo make install
-    sudo make install_fw
-    sudo cp rtw88.conf /etc/modprobe.d/
-    cd $SCRIPT_DIR
+    read -r -p "Want install Wireless Drivers Alpha? [y/N]" -n 1
+    echo # (optional) move to a new line
+    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    	sudo apt update
+    	sudo apt upgrade -y
+    	#sudo apt install linux-headers-generic build-essential git -y
+    	sudo apt install dkms -y
+    	rm -rf $HOME/rtw88
+    	cd $HOME
+    	git clone https://github.com/lwfinger/rtw88
+    	cd $HOME/rtw88
+    	make
+    	sudo make install
+    	sudo make install_fw
+    	sudo cp rtw88.conf /etc/modprobe.d/
+    	cd $SCRIPT_DIR
+	if
 
     echo "###############################################################################"
     echo " Installing brave"
