@@ -218,7 +218,7 @@ case "$OS" in
     	sudo make install_fw
     	sudo cp rtw88.conf /etc/modprobe.d/
     	cd $SCRIPT_DIR
-	if
+	fi
 
     echo "###############################################################################"
     echo " Installing brave"
