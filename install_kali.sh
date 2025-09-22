@@ -340,15 +340,15 @@ echo "${green} Installing and configuration complete !!!! ${reset}"
 echo "${green}###############################################################################${reset}"
 
 echo " "
-echo "${blue}###############################################################################${reset}"
-echo "${blue} Install Oh-my-zsh and power level${reset}"
-echo "${blue}###############################################################################${reset}"
-echo "${blue} Manual Installation:${reset}"
-echo '${blue}   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" ${reset}'
-echo '${blue}   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ${reset}'
-echo '${blue}   cp /etc/skel/.zshrc ~/.zshrc${reset}'
-echo '${blue}   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k ${reset}'
-echo '${blue}   echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc ${reset}'
+echo "${cyan}###############################################################################${reset}"
+echo "${cyan} Install Oh-my-zsh and power level${reset}"
+echo "${cyan}###############################################################################${reset}"
+echo "${cyan} Manual Installation:${reset}"
+echo 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+echo 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
+echo 'cp /etc/skel/.zshrc ~/.zshrc'
+echo 'git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k'
+echo 'echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc'
 
 if [ -f /var/run/reboot-required ]; then
   echo "${red}###############################################################################${reset}"
