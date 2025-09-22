@@ -41,26 +41,27 @@ f_linux_basic_packages() {
   echo "${blue}###############################################################################${reset}"
   sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli mosh eza -y 
   sudo apt install wireshark git tmux guake python3 python3-pip tlp jq remmina -y
+  sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions -y
 }
 
-f_linux_install_app() {
-  f_linux_ssh_server
-  f_linux_upgrade
-  f_linux_basic_packages
-
+f_linux_bluetoothManager() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing bluetooth manager${reset}"
   echo "${blue}###############################################################################${reset}"
   sudo apt install blueman -y 
   sudo systemctl enable bluetooth.service
   sudo systemctl start bluetooth.service
+}
 
+f_linux_SecPackages() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing Security Packages${reset}"
   echo "${blue}###############################################################################${reset}"
   sudo apt install tilix maltego metasploit-framework burpsuite aircrack-ng -y 
   sudo apt install hydra nmap beef-xss nikto wavemon -y
+}
 
+f_linux_kismet() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing dependencies for kismet${reset}"
   echo "${blue}###############################################################################${reset}"
@@ -69,10 +70,6 @@ f_linux_install_app() {
   sudo apt install libdw-dev libsqlite3-dev libprotobuf-dev libprotobuf-c-dev -y 
   sudo apt install protobuf-compiler protobuf-c-compiler -y 
   sudo apt install libusb-1.0-0-dev -y
-
-  echo "${blue}###############################################################################${reset}"
-  echo "${blue} Installing pytho3 packages${reset}"
-  echo "${blue}###############################################################################${reset}"
   sudo apt install python3 python3-setuptools python3-protobuf python3-requests -y
   sudo apt install python3-numpy python3-serial python3-usb python3-dev -y 
   sudo apt install python3-websockets librtlsdr0 libubertooth-dev libbtbb-dev -y
@@ -80,14 +77,8 @@ f_linux_install_app() {
   sudo apt-get install librtlsdr0 python3-usb python3-paho-mqtt -y
 
   echo "${blue}###############################################################################${reset}"
-  echo "${blue} Installing libusb${reset}"
+  echo "${blue} Installing GQRX${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt-get install libusb-1.0-0-dev
-
-  echo "${blue}###############################################################################${reset}"
-  echo "${blue}Installing GQRX${reset}"
-  echo "${blue}###############################################################################${reset}"
-  sudo apt update
   sudo apt-get install software-properties-common
   sudo apt-get install python3-launchpadlib
   sudo apt update
@@ -98,41 +89,52 @@ f_linux_install_app() {
   echo "${blue} Compiling kismet${reset}"
   echo "${blue}###############################################################################${reset}"
   sudo apt -y install kismet
+}
 
+f_linux_yubiauth() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing yubi authenticator${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt-get update
   sudo apt install yubioath-desktop -y
-  
-  echo "${blue}###############################################################################${reset}"
-  echo "${blue} Installing snapd${reset}"
-  echo "${blue}###############################################################################${reset}"
-  sudo apt-get update
-  sudo apt install snapd -y
-  sudo systemctl enable --now snapd apparmor
+}
 
-  echo "${blue}###############################################################################${reset}"
-  echo "${blue} Installing whatsapp client${reset}"
-  echo "${blue}###############################################################################${reset}"
-  sudo snap install whatsapp-linux-app
-
+f_linux_netbird() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing Netbird client${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt-get update
   sudo apt-get install ca-certificates curl gnupg -y
   curl -sSL https://pkgs.netbird.io/debian/public.key | sudo gpg --dearmor --output /usr/share/keyrings/netbird-archive-keyring.gpg
   echo 'deb [signed-by=/usr/share/keyrings/netbird-archive-keyring.gpg] https://pkgs.netbird.io/debian stable main' | sudo tee /etc/apt/sources.list.d/netbird.list
   sudo apt-get update -y
   sudo apt-get install netbird -y
   sudo apt-get install netbird-ui -y
+}
 
+f_linux_gpstools() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing GPS tools${reset}"
   echo "${blue}###############################################################################${reset}"
   sudo apt install gpsd gpsd-clients libgps-dev -y
+}
 
+f_linux_brave() {
+  echo "${blue}###############################################################################${reset}"
+  echo "${blue} Installing brave${reset}"
+  echo "${blue}###############################################################################${reset}"
+  sudo curl -fsS https://dl.brave.com/install.sh | sh
+}
+
+f_linux_mullvad() {
+  echo "${blue}###############################################################################${reset}"
+  echo "${blue} Installing Mullvad browser${reset}"
+  echo "${blue}###############################################################################${reset}"
+  sudo curl -fsSLo /usr/share/keyrings/mullvad-keyring.asc https://repository.mullvad.net/deb/mullvad-keyring.asc
+  echo "deb [signed-by=/usr/share/keyrings/mullvad-keyring.asc arch=$( dpkg --print-architecture )] https://repository.mullvad.net/deb/stable stable main" | sudo tee /etc/apt/sources.list.d/mullvad.list
+  sudo apt update
+  sudo apt install mullvad-browser
+}
+
+f_linux_alphaDriver(){
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing RTL8812AU/21AU and RTL8814AU Wireless drivers${reset}"
   echo "${blue}###############################################################################${reset}"
@@ -153,20 +155,9 @@ f_linux_install_app() {
     sudo cp rtw88.conf /etc/modprobe.d/
     cd $SCRIPT_DIR
 	fi
+}
 
-  echo "${blue}###############################################################################${reset}"
-  echo "${blue} Installing brave${reset}"
-  echo "${blue}###############################################################################${reset}"
-  sudo curl -fsS https://dl.brave.com/install.sh | sh
-
-  echo "${blue}###############################################################################${reset}"
-  echo "${blue} Installing Mullvad browser${reset}"
-  echo "${blue}###############################################################################${reset}"
-  sudo curl -fsSLo /usr/share/keyrings/mullvad-keyring.asc https://repository.mullvad.net/deb/mullvad-keyring.asc
-  echo "deb [signed-by=/usr/share/keyrings/mullvad-keyring.asc arch=$( dpkg --print-architecture )] https://repository.mullvad.net/deb/stable stable main" | sudo tee /etc/apt/sources.list.d/mullvad.list
-  sudo apt update
-  sudo apt install mullvad-browser
-
+f_linux_spotify() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing Spotify${reset}"
   echo "${blue}###############################################################################${reset}"
@@ -179,20 +170,23 @@ f_linux_install_app() {
       sudo apt-get update 
       sudo apt-get install spotify-client -y
   fi
-
-  echo "${blue}###############################################################################${reset}"
-  echo "${blue} Install Oh-my-zsh and power level${reset}"
-  echo "${blue}###############################################################################${reset}"
-  sudo sudo apt-get install -y zsh zsh-syntax-highlighting zsh-autosuggestions -y
-  echo " execute:"
-  echo '   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" '
-  echo '   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions '
-  echo '   cp /etc/skel/.zshrc ~/.zshrc'
-  echo '   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k '
-  echo '   echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc '
 }
 
-
+f_linux_install_app() {
+  f_linux_ssh_server
+  f_linux_upgrade
+  f_linux_basic_packages
+  f_linux_bluetoothManager
+  f_linux_SecPackages
+  f_linux_kismet
+  f_linux_yubiauth
+  f_linux_netbird
+  f_linux_gpstools
+  f_linux_brave
+  f_linux_mullvad
+  f_linux_alphaDriver
+  f_linux_spotify
+}
 
 # #############################################################################
 # error codes
@@ -344,6 +338,17 @@ echo " "
 echo "${green}###############################################################################${reset}"
 echo "${green} Installing and configuration complete !!!! ${reset}"
 echo "${green}###############################################################################${reset}"
+
+echo " "
+echo "${blue}###############################################################################${reset}"
+echo "${blue} Install Oh-my-zsh and power level${reset}"
+echo "${blue}###############################################################################${reset}"
+echo "${blue} Manual Installation:${reset}"
+echo '${blue}   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" ${reset}'
+echo '${blue}   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ${reset}'
+echo '${blue}   cp /etc/skel/.zshrc ~/.zshrc${reset}'
+echo '${blue}   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k ${reset}'
+echo '${blue}   echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc ${reset}'
 
 if [ -f /var/run/reboot-required ]; then
   echo "${red}###############################################################################${reset}"
