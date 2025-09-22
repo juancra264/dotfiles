@@ -44,9 +44,9 @@ f_linux_basic_packages() {
 }
 
 f_linux_install_app() {
-  f_linux_ssh_server()
-  f_linux_upgrade()
-  f_linux_basic_packages()
+  f_linux_ssh_server
+  f_linux_upgrade
+  f_linux_basic_packages
 
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing bluetooth manager${reset}"
@@ -268,7 +268,7 @@ esac
 case "$OS" in
   'linux')
     #For Linux Systems
-    f_linux_install_app()
+    f_linux_install_app
     ;;
   'freebsd'|'openbsd'|'netbsd')
     #For bsd Systems
