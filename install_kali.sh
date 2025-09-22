@@ -39,7 +39,7 @@ f_linux_basic_packages() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing basic packages${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli mosh exa -y 
+  sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli mosh eza -y 
   sudo apt install wireshark git tmux guake python3 python3-pip tlp jq remmina -y
 }
 
