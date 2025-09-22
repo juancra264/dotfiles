@@ -105,8 +105,6 @@ case "$OS" in
     sudo apt dist-upgrade -y
     sudo apt-get full-upgrade -y
     sudo apt autoremove -y
-    #sudo apt install -y linux-headers-$(uname -r)
-    #sudo apt-get install linux-headers-amd64 linux-image-amd64 -y
 
     echo "###############################################################################"
     echo " Installing basic packages"
@@ -205,19 +203,19 @@ case "$OS" in
     read -r -p "Want install Wireless Drivers Alpha? [y/N]" -n 1
     echo # (optional) move to a new line
     if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-    	sudo apt update
-    	sudo apt upgrade -y
-    	#sudo apt install linux-headers-generic build-essential git -y
-    	sudo apt install dkms -y
-    	rm -rf $HOME/rtw88
-    	cd $HOME
-    	git clone https://github.com/lwfinger/rtw88
-    	cd $HOME/rtw88
-    	make
-    	sudo make install
-    	sudo make install_fw
-    	sudo cp rtw88.conf /etc/modprobe.d/
-    	cd $SCRIPT_DIR
+      sudo apt update
+      sudo apt upgrade -y
+      #sudo apt install linux-headers-generic build-essential git -y
+      sudo apt install dkms -y
+      rm -rf $HOME/rtw88
+      cd $HOME
+      git clone https://github.com/lwfinger/rtw88
+      cd $HOME/rtw88
+      make
+      sudo make install
+      sudo make install_fw
+      sudo cp rtw88.conf /etc/modprobe.d/
+      cd $SCRIPT_DIR
 	fi
 
     echo "###############################################################################"
@@ -317,14 +315,6 @@ echo "##########################################################################
 rm -rf $HOME/.gitconfig
 ln -s $HOME/dotfiles/git/gitconfig $HOME/.gitconfig
 
-# Installing VIM pluggins for HCL (hcl.vim)
-#echo "###############################################################################"
-#echo " Configuring HCL for VIM"
-#echo "###############################################################################"
-#mkdir -p ~/.vim/pack/jvirtanen/start
-#cd ~/.vim/pack/jvirtanen/start
-#git clone https://github.com/jvirtanen/vim-hcl.git
-
 echo "###############################################################################"
 echo " Restoring Power Level 10K"
 echo "###############################################################################"
@@ -336,7 +326,6 @@ if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     ln -s $HOME/dotfiles/p10k/p10k.zsh $HOME/.p10k.zsh
 fi
 
-
 echo " "
 echo "###############################################################################"
 echo " Installing and configuration complete !!!! "
@@ -347,7 +336,5 @@ if [ -f /var/run/reboot-required ]; then
   echo " Please reboot the system"
   echo "###############################################################################"
 fi
-
-
 
 exit 0
