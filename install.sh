@@ -92,7 +92,11 @@ f_linux_kismet() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Compiling kismet${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt -y install kismet
+  read -r -p "Want install kismet? [y/N]" -n 1
+  echo # (optional) move to a new line
+  if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    sudo apt -y install kismet
+  if
 }
 
 f_linux_yubiauth() {
