@@ -96,7 +96,7 @@ f_linux_kismet() {
   echo # (optional) move to a new line
   if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sudo apt -y install kismet
-  if
+  fi
 }
 
 f_linux_yubiauth() {
