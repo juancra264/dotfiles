@@ -111,7 +111,7 @@ case "$OS" in
     echo "###############################################################################"
     echo " Installing basic packages"
     echo "###############################################################################"
-    sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli mosh -y 
+    sudo apt install htop glances iperf3 kitty speedtest-cli mosh -y 
     sudo apt install wireshark git tmux guake python3 python3-pip tlp jq remmina -y
 
     echo "###############################################################################"
