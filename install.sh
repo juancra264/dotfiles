@@ -57,8 +57,12 @@ f_linux_SecPackages() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing Security Packages${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt install tilix maltego metasploit-framework burpsuite aircrack-ng -y 
-  sudo apt install hydra nmap beef-xss nikto wavemon -y
+  read -r -p "Want install Security Packages? [y/N]" -n 1
+  echo # (optional) move to a new line
+  if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    sudo apt install tilix maltego metasploit-framework burpsuite aircrack-ng -y 
+    sudo apt install hydra nmap beef-xss nikto wavemon -y
+  fi
 }
 
 f_linux_kismet() {
