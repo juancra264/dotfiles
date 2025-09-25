@@ -65,7 +65,7 @@ f_linux_install_ntp(){
   read -r -p "Want install ntpsec? [y/N]" -n 1
   echo # (optional) move to a new line
   if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-    sudo apt install ntpsec
+    sudo apt install ntpsec -y
     sudo systemctl enable ntpsec.service
     sudo systemctl restart ntpsec.service  
   fi
