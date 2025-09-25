@@ -39,9 +39,16 @@ f_linux_basic_packages() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing basic packages${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt install glances bmon htop iperf3 kitty speedtest-cli mosh eza -y 
-  sudo apt install wireshark git tmux guake python3 python3-pip tlp jq remmina -y
+  sudo apt install glances bmon htop speedtest-cli mosh eza picocom -y 
+  sudo apt install wireshark git tmux python3 python3-pip tlp jq  -y
   sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions -y
+}
+
+f_linux_desktop_packages() {
+  echo "${blue}###############################################################################${reset}"
+  echo "${blue} Installing desktop packages${reset}"
+  echo "${blue}###############################################################################${reset}"
+  sudo apt install guake kitty iperf3 remmina -y
 }
 
 f_linux_bluetoothManager() {
@@ -69,23 +76,20 @@ f_linux_kismet() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing dependencies for kismet${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt install build-essential git libwebsockets-dev pkg-config zlib1g-dev -y
+  sudo apt install build-essential libwebsockets-dev pkg-config zlib1g-dev -y
   sudo apt install libnl-3-dev libnl-genl-3-dev libcap-dev libpcap-dev libnm-dev -y 
   sudo apt install libdw-dev libsqlite3-dev libprotobuf-dev libprotobuf-c-dev -y 
   sudo apt install protobuf-compiler protobuf-c-compiler -y 
   sudo apt install libusb-1.0-0-dev -y
   sudo apt install python3 python3-setuptools python3-protobuf python3-requests -y
-  sudo apt install python3-numpy python3-serial python3-usb python3-dev -y 
+  sudo apt install python3-numpy python3-serial python3-usb python3-dev python3-paho-mqtt -y 
   sudo apt install python3-websockets libubertooth-dev libbtbb-dev -y
-  sudo apt-get install python3-setuptools python3-protobuf python3-requests -y
-  sudo apt-get install python3-usb python3-paho-mqtt -y
 
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing GQRX${reset}"
   echo "${blue}###############################################################################${reset}"
   sudo apt-get install software-properties-common
   sudo apt-get install python3-launchpadlib
-  sudo apt update
   sudo apt-get update
   sudo apt-get install gqrx-sdr -y
 
@@ -110,12 +114,16 @@ f_linux_netbird() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing Netbird client${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt-get install ca-certificates curl gnupg -y
-  curl -sSL https://pkgs.netbird.io/debian/public.key | sudo gpg --dearmor --output /usr/share/keyrings/netbird-archive-keyring.gpg
-  echo 'deb [signed-by=/usr/share/keyrings/netbird-archive-keyring.gpg] https://pkgs.netbird.io/debian stable main' | sudo tee /etc/apt/sources.list.d/netbird.list
-  sudo apt-get update -y
-  sudo apt-get install netbird -y
-  sudo apt-get install netbird-ui -y
+  read -r -p "Want install Netbird client? [y/N]" -n 1
+  echo # (optional) move to a new line
+  if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    sudo apt-get install ca-certificates curl gnupg -y
+    curl -sSL https://pkgs.netbird.io/debian/public.key | sudo gpg --dearmor --output /usr/share/keyrings/netbird-archive-keyring.gpg
+    echo 'deb [signed-by=/usr/share/keyrings/netbird-archive-keyring.gpg] https://pkgs.netbird.io/debian stable main' | sudo tee /etc/apt/sources.list.d/netbird.list
+    sudo apt-get update -y
+    sudo apt-get install netbird -y
+    sudo apt-get install netbird-ui -y
+  fi
 }
 
 f_linux_gpstools() {
@@ -181,19 +189,29 @@ f_linux_spotify() {
 }
 
 f_linux_install_app() {
+  # General Linux installation server and desktop
   f_linux_ssh_server
   f_linux_upgrade
   f_linux_basic_packages
-  f_linux_bluetoothManager
-  f_linux_SecPackages
-  f_linux_kismet
-  f_linux_yubiauth
   f_linux_netbird
-  f_linux_gpstools
-  f_linux_brave
-  f_linux_mullvad
-  f_linux_alphaDriver
-  f_linux_spotify
+  # Ask if install desktop packages
+  read -r -p "Want to continue with desktop packages install? [y/N]" -n 1
+  echo # (optional) move to a new line
+  if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    f_linux_brave
+    f_linux_mullvad
+    f_linux_spotify
+    f_linux_yubiauth
+    f_linux_bluetoothManager
+  fi
+  read -r -p "Want to continue with infosec packages install? [y/N]" -n 1
+  echo # (optional) move to a new line
+  if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    f_linux_SecPackages
+    f_linux_alphaDriver
+    f_linux_gpstools
+    f_linux_kismet
+  fi
 }
 
 # #############################################################################
@@ -359,7 +377,7 @@ echo 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/mast
 echo 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
 echo 'cp /etc/skel/.zshrc ~/.zshrc'
 echo 'git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k'
-echo 'echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc'
+echo "echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc"
 
 if [ -f /var/run/reboot-required ]; then
   echo "${red}###############################################################################${reset}"
