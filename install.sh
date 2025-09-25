@@ -61,6 +61,16 @@ f_linux_bluetoothManager() {
   sudo systemctl start bluetooth.service
 }
 
+f_linux_install_ntp(){
+  read -r -p "Want install ntpsec? [y/N]" -n 1
+  echo # (optional) move to a new line
+  if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    sudo apt install ntpsec
+    sudo systemctl enable ntpsec.service
+    sudo systemctl restart ntpsec.service  
+  fi
+}
+
 f_linux_SecPackages() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing Security Packages${reset}"
@@ -194,6 +204,7 @@ f_linux_install_app() {
   f_linux_ssh_server
   f_linux_upgrade
   f_linux_basic_packages
+  f_linux_install_ntp
   f_linux_netbird
   # Ask if install desktop packages
   read -r -p "Want to continue with desktop packages install? [y/N]" -n 1
@@ -214,6 +225,7 @@ f_linux_install_app() {
     f_linux_kismet
   fi
 }
+
 
 # #############################################################################
 # error codes
