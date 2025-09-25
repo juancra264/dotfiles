@@ -326,10 +326,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # for git config
 echo "${blue}###############################################################################${reset}"
-echo "${blue} Configuring TMUX${reset}"
+echo "${blue} Configuring Git${reset}"
 echo "${blue}###############################################################################${reset}"
 rm -rf $HOME/.gitconfig
 ln -s $HOME/dotfiles/git/gitconfig $HOME/.gitconfig
+git config --global user.name "juancra264"
+git config --global user.email "juancra264@hotmail.com"
+git config --global user.username "juancra264"
 
 echo "${cyan}###############################################################################${reset}"
 echo "${cyan} Restoring Power Level 10K${reset}"
