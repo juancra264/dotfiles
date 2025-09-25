@@ -41,6 +41,7 @@ f_linux_basic_packages() {
   echo "${blue}###############################################################################${reset}"
   sudo apt install glances bmon htop speedtest-cli mosh eza picocom -y 
   sudo apt install ncdu wireshark git tmux python3 python3-pip tlp jq  -y
+  sudo apt install util-linux-extra -y
   sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions -y
 }
 
