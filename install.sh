@@ -226,6 +226,8 @@ f_linux_install_app() {
     f_linux_gpstools
     f_linux_kismet
   fi
+  # adjust the timezone to chicago
+  sudo timedatectl set-timezone America/Chicago 
 }
 
 
