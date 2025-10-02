@@ -21,7 +21,11 @@ alias ipinfo="curl http://ip-api.com/"
 alias macinfo="curl https://api.macvendors.com/"
 
 # Python scripts shortcuts:
-alias pingmon="python3 /Users/juaramirez/dev/pingmon/pingmon.py" 
+alias macvendor="bash ~/nettools/macvendor/macvendor.sh"
+alias macadd="bash ~/nettools/macadd/macadd.sh"
+alias checknet="bash ~/nettools/checknet/checknet.sh"
+alias ipaddinfo="bash ~/nettools/ipaddinfo/ipaddinfo.sh"
+alias pingmon="python ~/nettools/pingmon/pingmon.py"alias pingmon="python3 /Users/juaramirez/dev/pingmon/pingmon.py" 
 
 alias curltime="curl -o /dev/null -s -w 'Total: %{time_total}s\n'"
 #alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
