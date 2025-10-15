@@ -43,6 +43,7 @@ f_linux_basic_packages() {
   sudo apt install ncdu wireshark git tmux python3 python3-pip tlp jq  -y
   sudo apt install util-linux-extra net-tools gcc make dstat wget -y
   sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions -y
+  sudo apt install nmap -y
   # Add current user to dialout group to use the serial interfaces with picocom.
   sudo usermod -a -G dialout "$USER"
 }
@@ -81,7 +82,7 @@ f_linux_SecPackages() {
   echo # (optional) move to a new line
   if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sudo apt install tilix maltego metasploit-framework burpsuite aircrack-ng -y 
-    sudo apt install hydra nmap beef-xss nikto wavemon -y
+    sudo apt install hydra beef-xss nikto wavemon -y
   fi
 }
 
