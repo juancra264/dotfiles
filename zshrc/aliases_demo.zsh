@@ -16,3 +16,7 @@ alias serial0="picocom -b 9600 -r -l /dev/ttyUSB0"
 alias serial1="picocom -b 9600 -r -l /dev/ttyUSB1"
 alias serial2="picocom -b 115200 -r -l /dev/ttyUSB2"
 alias serial3="picocom -b 9600 -r -l /dev/ttyUSB3"
+
+# Remote session
+alias sshcontrol="mosh jcramirez@control.netbird.cloud -- sh -c 'tmux attach-session -t ws || tmux new-session -s ws'"
+alias sshcontrol02="mosh jcramirez@control02.netbird.cloud -- sh -c 'tmux attach-session -t ws || tmux new-session -s ws'"
