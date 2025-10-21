@@ -44,7 +44,7 @@ sed -i 's|^#*AuthorizedKeysFile.*|AuthorizedKeysFile .ssh/authorized_keys|' "$SS
 sed -i 's/^#*PermitRootLogin.*/PermitRootLogin no/' "$SSHD_CONFIG"
 
 # Restart SSH service
-systemctl restart sshd
+systemctl restart ssh
 
 echo "SSH server configured to allow only key-based authentication for user $USER."
 
