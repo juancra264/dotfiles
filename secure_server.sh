@@ -36,15 +36,15 @@ if [ ! -f "$BACKUP_CONFIG" ]; then
 fi
 
 # Update sshd_config
-sed -i 's/^#*PasswordAuthentication.*/PasswordAuthentication no/' "$SSHD_CONFIG"
-sed -i 's/^#*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' "$SSHD_CONFIG"
-sed -i 's/^#*UsePAM.*/UsePAM no/' "$SSHD_CONFIG"
-sed -i 's/^#*PubkeyAuthentication.*/PubkeyAuthentication yes/' "$SSHD_CONFIG"
-sed -i 's|^#*AuthorizedKeysFile.*|AuthorizedKeysFile .ssh/authorized_keys|' "$SSHD_CONFIG"
-sed -i 's/^#*PermitRootLogin.*/PermitRootLogin no/' "$SSHD_CONFIG"
+sudo sed -i 's/^#*PasswordAuthentication.*/PasswordAuthentication no/' "$SSHD_CONFIG"
+sudo sed -i 's/^#*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' "$SSHD_CONFIG"
+sudo sed -i 's/^#*UsePAM.*/UsePAM no/' "$SSHD_CONFIG"
+sudo sed -i 's/^#*PubkeyAuthentication.*/PubkeyAuthentication yes/' "$SSHD_CONFIG"
+sudo sed -i 's|^#*AuthorizedKeysFile.*|AuthorizedKeysFile .ssh/authorized_keys|' "$SSHD_CONFIG"
+sudo sed -i 's/^#*PermitRootLogin.*/PermitRootLogin no/' "$SSHD_CONFIG"
 
 # Restart SSH service
-systemctl restart ssh
+sudo systemctl restart ssh
 
 echo "SSH server configured to allow only key-based authentication for user $USER."
 
