@@ -43,7 +43,7 @@ f_linux_basic_packages() {
   sudo apt install ncdu wireshark git tmux python3 python3-pip tlp jq  -y
   sudo apt install util-linux-extra net-tools gcc make dstat wget -y
   sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions -y
-  sudo apt install nmap -y
+  sudo apt install nmap wireless-tools -y
   # Add current user to dialout group to use the serial interfaces with picocom.
   sudo usermod -a -G dialout "$USER"
 }
