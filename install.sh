@@ -29,7 +29,8 @@ f_linux_upgrade() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Upgrading${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt upgrade
+  sudo apt update
+  sudo apt upgrade -y
   sudo apt dist-upgrade -y
   sudo apt-get full-upgrade -y
   sudo apt autoremove -y
