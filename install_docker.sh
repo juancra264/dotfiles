@@ -32,6 +32,13 @@ f_linux_docker() {
   echo "${blue}###############################################################################${reset}"
   docker --version
   docker compose version   
+  cat << EOF > /etc/systemd/system/docker.service.d/min_api_version.conf
+[Service]
+Environment="DOCKER_MIN_API_VERSION=1.24"
+EOF
+  sudo systemctl daemon-reload
+  sudo systemctl restart docker
+  sudo systemctl show docker | grep DOCKER_MIN_API_VERSION
 }
 
 f_linux_install_app() {
