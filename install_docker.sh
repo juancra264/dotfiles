@@ -31,7 +31,8 @@ f_linux_docker() {
   echo "${blue} Docker installed${reset}"
   echo "${blue}###############################################################################${reset}"
   docker --version
-  docker compose version   
+  docker compose version
+  sudo mkdir /etc/systemd/system/docker.service.d/   
   sudo touch /etc/systemd/system/docker.service.d/min_api_version.conf 
   sudo at << EOF > /etc/systemd/system/docker.service.d/min_api_version.conf
 [Service]
