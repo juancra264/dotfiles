@@ -37,7 +37,7 @@ f_linux_docker() {
     sudo mkdir -p "$directory_path"
   fi
   sudo touch $directory_path/min_api_version.conf 
-  sudo at << EOF > $directory_path/min_api_version.conf
+  sudo cat << EOF > $directory_path/min_api_version.conf
 [Service]
 Environment="DOCKER_MIN_API_VERSION=1.24"
 EOF
