@@ -32,7 +32,8 @@ f_linux_docker() {
   echo "${blue}###############################################################################${reset}"
   docker --version
   docker compose version   
-  cat << EOF > /etc/systemd/system/docker.service.d/min_api_version.conf
+  sudo touch /etc/systemd/system/docker.service.d/min_api_version.conf 
+  sudo at << EOF > /etc/systemd/system/docker.service.d/min_api_version.conf
 [Service]
 Environment="DOCKER_MIN_API_VERSION=1.24"
 EOF
