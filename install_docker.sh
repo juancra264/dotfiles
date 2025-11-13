@@ -36,14 +36,15 @@ f_linux_docker() {
   if [[ ! -d "$directory_path" ]]; then
     sudo mkdir -p "$directory_path"
   fi
-  sudo touch $directory_path/min_api_version.conf 
-  sudo cat << EOF > $directory_path/min_api_version.conf
-[Service]
-Environment="DOCKER_MIN_API_VERSION=1.24"
-EOF
-  sudo systemctl daemon-reload
-  sudo systemctl restart docker
-  sudo systemctl show docker | grep DOCKER_MIN_API_VERSION
+  file_api_version=$directory_path"/min_api_version.conf"
+  if [[ ! -f $file_api_version ]]; then
+    sudo touch $directory_path/min_api_version.conf 
+    sudo echo "[Service]" > $directory_path/min_api_version.conf
+    sudo echo 'Environment="DOCKER_MIN_API_VERSION=1.24"' > $directory_path/min_api_version.conf
+    sudo systemctl daemon-reload
+    sudo systemctl restart docker
+    sudo systemctl show docker | grep DOCKER_MIN_API_VERSION
+  fi
 }
 
 f_linux_install_app() {
