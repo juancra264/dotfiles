@@ -32,9 +32,12 @@ f_linux_docker() {
   echo "${blue}###############################################################################${reset}"
   docker --version
   docker compose version
-  sudo mkdir /etc/systemd/system/docker.service.d/   
-  sudo touch /etc/systemd/system/docker.service.d/min_api_version.conf 
-  sudo at << EOF > /etc/systemd/system/docker.service.d/min_api_version.conf
+  directory_path="/etc/systemd/system/docker.service.d" 
+  if [[ ! -d "$directory_path" ]]; then
+    sudo mkdir -p "$directory_path"
+  fi
+  sudo touch $directory_path/min_api_version.conf 
+  sudo at << EOF > $directory_path/min_api_version.conf
 [Service]
 Environment="DOCKER_MIN_API_VERSION=1.24"
 EOF
