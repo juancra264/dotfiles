@@ -42,7 +42,7 @@ f_linux_basic_packages() {
   echo "${blue}###############################################################################${reset}"
   sudo apt install neovim bat glances bmon htop speedtest-cli mosh eza picocom -y 
   sudo apt install ncdu wireshark git tmux python3 python3-pip tlp jq  -y
-  sudo apt install util-linux-extra net-tools gcc make dstat wget -y
+  sudo apt install iperf3 util-linux-extra net-tools gcc make dstat wget -y
   sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions -y
   sudo apt install dnsutils traceroute nmap wireless-tools -y
   # Add current user to dialout group to use the serial interfaces with picocom.
