@@ -40,11 +40,17 @@ f_linux_basic_packages() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing basic packages${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt install neovim bat glances bmon htop speedtest-cli mosh eza picocom -y 
-  sudo apt install ncdu wireshark git tmux python3 python3-pip tlp jq  -y
-  sudo apt install iperf3 util-linux-extra net-tools gcc make dstat wget -y
+  # Develop tools
+  sudo apt install git vim neovim tmux python3 python3-pip tlp jq  -y
+  # Linux extras
+  sudo apt install util-linux-extra gcc make wget bat mosh eza -y
+  # ZSH and zsh tools
   sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions -y
-  sudo apt install dnsutils traceroute nmap wireless-tools -y
+  # Network tools
+  sudo apt install net-tools dnsutils traceroute nmap wireless-tools wireshark iperf3 speedtest-cli -y
+  sudo apt install picocom -y
+  # Monitoring tools
+  sudo apt install ncdu stat btop glances bmon htop -y
   # Add current user to dialout group to use the serial interfaces with picocom.
   sudo usermod -a -G dialout "$USER"
 }
