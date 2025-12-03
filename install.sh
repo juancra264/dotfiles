@@ -50,7 +50,7 @@ f_linux_basic_packages() {
   sudo apt install net-tools dnsutils traceroute nmap wireless-tools wireshark iperf3 speedtest-cli -y
   sudo apt install picocom -y
   # Monitoring tools
-  sudo apt install ncdu stat btop glances bmon htop -y
+  sudo apt install ncdu btop glances bmon htop -y
   # Add current user to dialout group to use the serial interfaces with picocom.
   sudo usermod -a -G dialout "$USER"
 }
