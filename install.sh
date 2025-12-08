@@ -216,6 +216,7 @@ f_linux_install_app() {
   f_linux_basic_packages
   f_linux_install_ntp
   f_linux_netbird
+  f_linux_alphaDriver
   # Ask if install desktop packages
   read -r -p "Want to continue with desktop packages install? [y/N]" -n 1
   echo # (optional) move to a new line
@@ -230,7 +231,6 @@ f_linux_install_app() {
   echo # (optional) move to a new line
   if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     f_linux_SecPackages
-    f_linux_alphaDriver
     f_linux_gpstools
     f_linux_kismet
   fi
