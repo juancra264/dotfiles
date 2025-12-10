@@ -191,7 +191,39 @@ f_linux_alphaDriver(){
     sudo make install_fw
     sudo cp rtw88.conf /etc/modprobe.d/
     cd $SCRIPT_DIR
-	fi
+  fi
+}
+
+f_linux_wifitools(){
+  echo "${blue}###############################################################################${reset}"
+  echo "${blue} Installing Wireless Tools${reset}"
+  echo "${blue}###############################################################################${reset}"
+  read -r -p "Want install Wireless tools? [y/N]" -n 1
+  echo # (optional) move to a new line
+  if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    sudo apt update
+    sudo apt install aircrack-ng -y
+    sudo apt install wifite -y
+  fi
+}
+
+f_linux_metasploit(){
+  echo "${blue}###############################################################################${reset}"
+  echo "${blue} Installing Metasploit suite${reset}"
+  echo "${blue}###############################################################################${reset}"
+  read -r -p "Want install Metasploit suite? [y/N]" -n 1
+  echo # (optional) move to a new line
+  if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    sudo apt update
+    curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
+    chmod +x msfinstall
+    sudo bash msfinstall
+    echo "${red}###############################################################################${reset}"
+    echo "${red} Start Metasploit console > msfconsole ${reset}"
+    echo "${red} Verify database connection > db_status ${reset}"
+    echo "${red} Update Metasploit > msfupdate ${reset}"
+    echo "${red}###############################################################################${reset}" 
+  fi
 }
 
 f_linux_spotify() {
@@ -217,6 +249,8 @@ f_linux_install_app() {
   f_linux_install_ntp
   f_linux_netbird
   f_linux_alphaDriver
+  f_linux_wifitools
+  f_linux_metasploit
   # Ask if install desktop packages
   read -r -p "Want to continue with desktop packages install? [y/N]" -n 1
   echo # (optional) move to a new line
@@ -227,7 +261,7 @@ f_linux_install_app() {
     f_linux_yubiauth
     f_linux_bluetoothManager
   fi
-  read -r -p "Want to continue with infosec packages install? [y/N]" -n 1
+  read -r -p "Want to continue with infosec (Kali) packages install? [y/N]" -n 1
   echo # (optional) move to a new line
   if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     f_linux_SecPackages
