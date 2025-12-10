@@ -251,6 +251,7 @@ f_linux_install_app() {
   f_linux_netbird
   f_linux_alphaDriver
   f_linux_wifitools
+  f_linux_kismet
   f_linux_metasploit
   # Ask if install desktop packages
   read -r -p "Want to continue with desktop packages install? [y/N]" -n 1
@@ -267,7 +268,6 @@ f_linux_install_app() {
   if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     f_linux_SecPackages
     f_linux_gpstools
-    f_linux_kismet
   fi
   # adjust the timezone to chicago
   sudo timedatectl set-timezone America/Chicago 
