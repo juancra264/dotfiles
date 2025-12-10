@@ -204,6 +204,7 @@ f_linux_wifitools(){
     sudo apt update
     sudo apt install aircrack-ng -y
     sudo apt install wifite -y
+    sudo apt install bully hashcat hcxdumptool hcxtools macchanger -y 
   fi
 }
 
