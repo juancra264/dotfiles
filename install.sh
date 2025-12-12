@@ -59,7 +59,7 @@ f_linux_desktop_packages() {
   echo "${blue}###############################################################################${reset}"
   echo "${blue} Installing desktop packages${reset}"
   echo "${blue}###############################################################################${reset}"
-  sudo apt install guake kitty iperf3 remmina -y
+  sudo apt install guake kitty remmina -y
 }
 
 f_linux_bluetoothManager() {
@@ -88,7 +88,7 @@ f_linux_SecPackages() {
   read -r -p "Want install Security Packages? [y/N]" -n 1
   echo # (optional) move to a new line
   if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-    sudo apt install tilix maltego metasploit-framework burpsuite aircrack-ng -y 
+    sudo apt install tilix maltego burpsuite -y 
     sudo apt install hydra beef-xss nikto wavemon -y
   fi
 }
@@ -211,9 +211,9 @@ f_linux_wifitools(){
   echo # (optional) move to a new line
   if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sudo apt update
+    sudo apt install bully hashcat hcxdumptool hcxtools macchanger -y 
     sudo apt install aircrack-ng -y
     sudo apt install wifite -y
-    sudo apt install bully hashcat hcxdumptool hcxtools macchanger -y 
   fi
 }
 
@@ -225,9 +225,9 @@ f_linux_metasploit(){
   echo # (optional) move to a new line
   if [[ "$REPLY" =~ ^[Yy]$ ]]; then
     sudo apt update
-    curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
-    chmod +x msfinstall
-    sudo bash msfinstall
+    curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > $HOME/msfinstall
+    chmod +x $HOME/msfinstall
+    sudo bash $HOME/msfinstall
     echo "${red}###############################################################################${reset}"
     echo "${red} Start Metasploit console > msfconsole ${reset}"
     echo "${red} Verify database connection > db_status ${reset}"
