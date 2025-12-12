@@ -95,32 +95,41 @@ f_linux_SecPackages() {
 
 f_linux_kismet() {
   echo "${blue}###############################################################################${reset}"
-  echo "${blue} Installing dependencies for kismet${reset}"
-  echo "${blue}###############################################################################${reset}"
-  sudo apt install build-essential libwebsockets-dev pkg-config zlib1g-dev -y
-  sudo apt install libnl-3-dev libnl-genl-3-dev libcap-dev libpcap-dev libnm-dev -y 
-  sudo apt install libdw-dev libsqlite3-dev libprotobuf-dev libprotobuf-c-dev -y 
-  sudo apt install protobuf-compiler protobuf-c-compiler -y 
-  sudo apt install libusb-1.0-0-dev -y
-  sudo apt install python3 python3-setuptools python3-protobuf python3-requests -y
-  sudo apt install python3-numpy python3-serial python3-usb python3-dev python3-paho-mqtt -y 
-  sudo apt install python3-websockets libubertooth-dev libbtbb-dev -y
-
-  echo "${blue}###############################################################################${reset}"
-  echo "${blue} Installing GQRX${reset}"
-  echo "${blue}###############################################################################${reset}"
-  sudo apt-get install software-properties-common
-  sudo apt-get install python3-launchpadlib
-  sudo apt-get update
-  sudo apt-get install gqrx-sdr -y
-
-  echo "${blue}###############################################################################${reset}"
   echo "${blue} Compiling kismet${reset}"
   echo "${blue}###############################################################################${reset}"
   read -r -p "Want install kismet? [y/N]" -n 1
   echo # (optional) move to a new line
   if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-    sudo apt -y install kismet
+    echo "${blue}###############################################################################${reset}"
+    echo "${blue} Setting repo for kismet ${reset}"
+    echo "${blue}###############################################################################${reset}"
+    wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key --quiet | gpg --dearmor | sudo tee /usr/share/keyrings/kismet-archive-keyring.gpg >/dev/null
+    echo 'deb [signed-by=/usr/share/keyrings/kismet-archive-keyring.gpg] https://www.kismetwireless.net/repos/apt/release/noble noble main' | sudo tee /etc/apt/sources.list.d/kismet.list >/dev/null
+    sudo apt-get update
+ 
+    echo "${blue}###############################################################################${reset}"
+    echo "${blue} Installing dependencies for kismet${reset}"
+    echo "${blue}###############################################################################${reset}"
+    sudo apt install build-essential libwebsockets-dev pkg-config zlib1g-dev -y
+    sudo apt install libnl-3-dev libnl-genl-3-dev libcap-dev libpcap-dev libnm-dev -y 
+    sudo apt install libdw-dev libsqlite3-dev libprotobuf-dev libprotobuf-c-dev -y 
+    sudo apt install protobuf-compiler protobuf-c-compiler -y 
+    sudo apt install libusb-1.0-0-dev -y
+    sudo apt install python3 python3-setuptools python3-protobuf python3-requests -y
+    sudo apt install python3-numpy python3-serial python3-usb python3-dev python3-paho-mqtt -y 
+    sudo apt install python3-websockets libubertooth-dev libbtbb-dev -y
+
+    echo "${blue}###############################################################################${reset}"
+    echo "${blue} Installing GQRX${reset}"
+    echo "${blue}###############################################################################${reset}"
+    sudo apt-get install software-properties-common
+    sudo apt-get install python3-launchpadlib
+    sudo apt-get install gqrx-sdr -y
+
+    echo "${blue}###############################################################################${reset}"
+    echo "${blue} Installing GQRX${reset}"
+    echo "${blue}###############################################################################${reset}"
+    sudo apt install kismet -y
   fi
 }
 
@@ -141,7 +150,7 @@ f_linux_netbird() {
     sudo apt-get install ca-certificates curl gnupg -y
     curl -sSL https://pkgs.netbird.io/debian/public.key | sudo gpg --dearmor --output /usr/share/keyrings/netbird-archive-keyring.gpg
     echo 'deb [signed-by=/usr/share/keyrings/netbird-archive-keyring.gpg] https://pkgs.netbird.io/debian stable main' | sudo tee /etc/apt/sources.list.d/netbird.list
-    sudo apt-get update -y
+    sudo apt-get update
     sudo apt-get install netbird -y
     sudo apt-get install netbird-ui -y
   fi
