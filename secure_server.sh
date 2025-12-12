@@ -32,7 +32,7 @@ fi
 # Backup sshd_config
 if [ ! -f "$BACKUP_CONFIG" ]; then
   echo "Backing up sshd_config to $BACKUP_CONFIG"
-  cp "$SSHD_CONFIG" "$BACKUP_CONFIG"
+  sudo cp "$SSHD_CONFIG" "$BACKUP_CONFIG"
 fi
 
 # Update sshd_config
